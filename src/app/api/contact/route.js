@@ -36,11 +36,11 @@ const contactSchema = Joi.object({
   message: Joi.string().min(10).max(1000).required().trim(),
 });
 
-// Create SMTP transporter
+// Create SMTP transporter with optimized settings
 const createTransporter = () => {
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT || 587,
+    port: parseInt(process.env.SMTP_PORT) || 587,
     secure: process.env.SMTP_PORT == 465,
     auth: {
       user: process.env.SMTP_USER,
@@ -49,15 +49,21 @@ const createTransporter = () => {
     tls: {
       rejectUnauthorized: false,
     },
+    // Connection optimization
+    pool: true,
+    maxConnections: 3,
+    maxMessages: 100,
+    connectionTimeout: 10000, // 10 seconds
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
   });
 };
 
 export async function POST(request) {
-  console.log('📨 Contact form submission received');
+  const requestStart = Date.now();
 
   try {
     const body = await request.json();
-    console.log('📝 Form data:', { name: body.name, email: body.email, messageLength: body.message?.length });
     
     // Validate request body
     const { error, value } = contactSchema.validate(body);
@@ -82,8 +88,6 @@ export async function POST(request) {
     const pass = process.env.SMTP_PASS;
     const smtpFrom = process.env.SMTP_FROM;
 
-    console.log('🔧 SMTP Config:', { host, port, user: user ? '✓ set' : '✗ missing', pass: pass ? '✓ set' : '✗ missing', from: smtpFrom });
-
     if (!host || !port || !user || !pass || !smtpFrom) {
       const missing = [];
       if (!host) missing.push('SMTP_HOST');
@@ -92,7 +96,7 @@ export async function POST(request) {
       if (!pass) missing.push('SMTP_PASS');
       if (!smtpFrom) missing.push('SMTP_FROM');
 
-      console.error('❌ Missing SMTP environment variables:', missing);
+      console.error('❌ Missing SMTP env vars:', missing.join(', '));
       return NextResponse.json(
         {
           success: false,
@@ -104,25 +108,6 @@ export async function POST(request) {
 
     // Create transporter
     const transporter = createTransporter();
-
-    // Verify SMTP connection
-    try {
-      await transporter.verify();
-      console.log('✅ SMTP connection verified successfully');
-    } catch (verifyError) {
-      console.error('❌ SMTP verification failed:', verifyError);
-      return NextResponse.json(
-        {
-          success: false,
-          message: 'Email server connection failed. Please check SMTP configuration.',
-          ...(process.env.NODE_ENV === 'development' && {
-            error: verifyError.message,
-            code: verifyError.code
-          }),
-        },
-        { status: 500 }
-      );
-    }
 
     // Get client IP address
     const forwardedFor = request.headers.get('x-forwarded-for');
@@ -252,14 +237,21 @@ export async function POST(request) {
       `,
     };
 
-    // Send emails
-    console.log('📧 Sending notification email...');
-    await transporter.sendMail(notificationMailOptions);
-    console.log('✅ Notification email sent');
+    // Send both emails in parallel for faster response
+    console.log('📧 Sending emails...');
+    const startTime = Date.now();
 
-    console.log('📧 Sending auto-reply email...');
-    await transporter.sendMail(autoReplyMailOptions);
-    console.log('✅ Auto-reply email sent');
+    await Promise.all([
+      transporter.sendMail(notificationMailOptions),
+      transporter.sendMail(autoReplyMailOptions)
+    ]);
+
+    const emailDuration = Date.now() - startTime;
+    const totalDuration = Date.now() - requestStart;
+    console.log(`✅ Emails sent in ${emailDuration}ms (total: ${totalDuration}ms)`);
+
+    // Close the connection pool
+    transporter.close();
 
     return NextResponse.json({
       success: true,
