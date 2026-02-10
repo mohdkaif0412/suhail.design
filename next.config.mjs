@@ -33,8 +33,9 @@ const nextConfig = {
   },
 
   // Environment variables exposed to the browser
+  // Note: For API routes, use relative URLs (e.g., '/api/contact') which work on any domain
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || '',
   },
 
   // Redirects for SEO

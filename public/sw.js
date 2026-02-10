@@ -1,4 +1,4 @@
-const CACHE_VERSION = '1.3.0';
+const CACHE_VERSION = '1.4.0';
 const CACHE_NAME = `himanshu-portfolio-v${CACHE_VERSION}`;
 const STATIC_CACHE_NAME = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE_NAME = `dynamic-${CACHE_VERSION}`;
