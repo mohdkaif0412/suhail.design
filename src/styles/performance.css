@@ -1,0 +1,202 @@
+/* Performance Optimization CSS */
+
+/* Lazy loading states */
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimizations for different device capabilities */
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.low-end-device .complex-animation {
+  display: none;
+}
+
+.slow-connection .non-essential-animation {
+  animation: none;
+}
+
+.power-saving {
+  /* Reduce visual effects when battery is low */
+  filter: contrast(0.9) brightness(0.95);
+}
+
+.power-saving * {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
+}
+
+.power-saving .gpu-intensive {
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Optimize for different connection types */
+.slow-connection img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+}
+
+/* Loading states */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+/* Critical rendering optimizations */
+.above-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Intersection observer optimizations */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+/* Image optimization */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+img[loading='lazy'] {
+  content-visibility: auto;
+}
+
+/* Performance monitoring indicators (dev only) */
+.perf-indicator {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 10000;
+  display: none;
+}
+
+.perf-indicator.show {
+  display: block;
+}
+
+.perf-good {
+  background: rgba(0, 128, 0, 0.8);
+}
+
+.perf-warning {
+  background: rgba(255, 165, 0, 0.8);
+}
+
+.perf-bad {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+/* Optimized focus styles */
+.focus-visible-only:focus {
+  outline: none;
+}
+
+.focus-visible-only:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Memory-efficient animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Use transform instead of changing layout properties */
+.slide-in {
+  animation: slideUp 0.3s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Optimize for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover-effect:hover {
+    /* Remove hover effects on touch devices */
+    transform: none;
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

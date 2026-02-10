@@ -1,0 +1,342 @@
+@import 'tailwindcss';
+
+@theme {
+  /* === SEMANTIC COLOR SYSTEM === */
+  /* Ready for both dark and light modes */
+
+  /* Font Families */
+  --font-heading: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+    'DejaVu Sans Mono', monospace;
+  --font-body: 'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* === DARK MODE (Current Default) === */
+  --color-background: #121212;
+  --color-background-secondary: #1c1c1c;
+  --color-background-tertiary: #262626;
+  --color-background-accent: #2d2d2d;
+  --color-background-elevated: #1a1a1a;
+  --color-background-overlay: rgba(18, 18, 18, 0.95);
+
+  --color-surface: #262626;
+  --color-surface-secondary: #1c1c1c;
+  --color-surface-elevated: #2d2d2d;
+  --color-surface-glass: rgba(38, 38, 38, 0.95);
+
+  --color-foreground: #ffffff;
+  --color-foreground-secondary: #d4d4d4;
+  --color-foreground-muted: #a3a3a3;
+  --color-foreground-subtle: #737373;
+
+  --color-border: #404040;
+  --color-border-secondary: #525252;
+  --color-border-muted: #2d2d2d;
+  --color-border-glass: rgba(115, 115, 115, 0.2);
+
+  /* === FUTURE LIGHT MODE VARIABLES === */
+  /* Uncomment when implementing light mode */
+  /*
+  --color-background-light: #ffffff;
+  --color-background-secondary-light: #f8fafc;
+  --color-background-tertiary-light: #f1f5f9;
+  --color-background-accent-light: #e2e8f0;
+  --color-background-elevated-light: #ffffff;
+  --color-background-overlay-light: rgba(255, 255, 255, 0.95);
+  
+  --color-surface-light: #ffffff;
+  --color-surface-secondary-light: #f8fafc;
+  --color-surface-elevated-light: #ffffff;
+  --color-surface-glass-light: rgba(255, 255, 255, 0.95);
+  
+  --color-foreground-light: #0f172a;
+  --color-foreground-secondary-light: #334155;
+  --color-foreground-muted-light: #64748b;
+  --color-foreground-subtle-light: #94a3b8;
+  
+  --color-border-light: #e2e8f0;
+  --color-border-secondary-light: #cbd5e1;
+  --color-border-muted-light: #f1f5f9;
+  --color-border-glass-light: rgba(148, 163, 184, 0.2);
+  */
+
+  /* === BRAND COLORS === */
+  --color-primary-50: #fafafa;
+  --color-primary-100: #f5f5f5;
+  --color-primary-200: #e5e5e5;
+  --color-primary-300: #d4d4d4;
+  --color-primary-400: #a3a3a3;
+  --color-primary-500: #ffffff;
+  --color-primary-600: #e5e5e5;
+  --color-primary-700: #d4d4d4;
+  --color-primary-800: #a3a3a3;
+  --color-primary-900: #737373;
+  --color-primary-950: #525252;
+
+  /* === NEUTRAL SCALE === */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* === ACCENT COLORS === */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  --color-success-950: #052e16;
+
+  --color-warning-50: #fefce8;
+  --color-warning-100: #fef9c3;
+  --color-warning-200: #fef08a;
+  --color-warning-300: #fde047;
+  --color-warning-400: #facc15;
+  --color-warning-500: #eab308;
+  --color-warning-600: #ca8a04;
+  --color-warning-700: #a16207;
+  --color-warning-800: #854d0e;
+  --color-warning-900: #713f12;
+  --color-warning-950: #422006;
+
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
+
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+  --color-info-950: #172554;
+
+  --color-accent-50: #faf5ff;
+  --color-accent-100: #f3e8ff;
+  --color-accent-200: #e9d5ff;
+  --color-accent-300: #d8b4fe;
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+  --color-accent-700: #7c3aed;
+  --color-accent-800: #6b21a8;
+  --color-accent-900: #581c87;
+  --color-accent-950: #3b0764;
+
+  /* === SHADOWS === */
+  --color-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --color-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --color-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --color-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --color-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --color-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --color-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Portfolio specific shadows */
+  --color-shadow-glass: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --color-shadow-primary: 0 4px 12px rgba(255, 255, 255, 0.1);
+  --color-shadow-primary-hover: 0 6px 20px rgba(255, 255, 255, 0.15);
+  --color-shadow-card: 0 25px 50px rgba(0, 0, 0, 0.4);
+
+  /* === ANIMATION DURATIONS === */
+  --animate-duration-75: 75ms;
+  --animate-duration-100: 100ms;
+  --animate-duration-150: 150ms;
+  --animate-duration-200: 200ms;
+  --animate-duration-300: 300ms;
+  --animate-duration-500: 500ms;
+  --animate-duration-700: 700ms;
+  --animate-duration-1000: 1000ms;
+
+  /* === BORDER RADIUS === */
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* === SPACING === */
+  --spacing-px: 1px;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3-5: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+  --spacing-36: 9rem;
+  --spacing-40: 10rem;
+  --spacing-44: 11rem;
+  --spacing-48: 12rem;
+  --spacing-52: 13rem;
+  --spacing-56: 14rem;
+  --spacing-60: 15rem;
+  --spacing-64: 16rem;
+  --spacing-72: 18rem;
+  --spacing-80: 20rem;
+  --spacing-96: 24rem;
+}
+
+.MyGradient {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Utility class for gradient masks */
+.gradient-mask {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Navbar button shine effect */
+.btn-shine {
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.btn-shine:hover::before {
+  transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+/* Global scroll behavior and layout fixes */
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Ensure consistent layout during animations */
+.route-transition-active {
+  overflow: hidden !important;
+}
+
+/* Custom scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+/* Shadow for enhanced input components */
+.shadow-input {
+  box-shadow: 
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+/* Meteor animation for subtle streaks inside cards */
+
+@keyframes meteor {
+  0% {
+    transform: translate(0, 0) rotate(-65deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-420px, 420px) rotate(-65deg);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  height: 1px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(148,163,184,0.9), rgba(148,163,184,0.0));
+  box-shadow: 0 0 6px rgba(148,163,184,0.08);
+  transform: rotate(-45deg);
+}
+
+.meteor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, rgba(148,163,184,0.9), rgba(148,163,184,0.0));
+  transform-origin: left center;
+}
+

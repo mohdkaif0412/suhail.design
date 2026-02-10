@@ -1,0 +1,10 @@
+# Direct redirects to avoid redirect chains
+# HTTP non-www to HTTPS www (direct)
+http://Suhail.in/* https://www.Suhail.in/:splat 301!
+# HTTP www to HTTPS www (direct)  
+http://www.Suhail.in/* https://www.Suhail.in/:splat 301!
+# HTTPS non-www to HTTPS www
+https://Suhail.design/* https://www.Suhail.in/:splat 301!
+
+# SPA routing fallback
+/*    /index.html   200

@@ -1,0 +1,89 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Next.js specific
+.next/
+out/
+*.tsbuildinfo
+
+# Environment variables
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+note.txt
+
+# Unused components (development artifacts)
+src/unused-components/
+
+# Personal documents and sensitive information
+personal-docs/
+
+# Development documents and internal artifacts  
+development-docs/
+
+# SSH keys and tokens
+token
+token.pub
+
+# Build and deployment artifacts
+build/
+coverage/
+.nyc_output/
+.cache/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Package manager files
+.pnpm-store/
+.yarn/
+yarn.lock.backup
+
+# Testing
+coverage/
+.coverage
+junit.xml
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Backup files
+*.backup
+*.bak
+*.orig
+
+# Vercel deployment
+.vercel

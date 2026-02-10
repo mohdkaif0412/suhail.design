@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects", 
+    "services": "Services",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hey, I'm Mohd Suhail",
+    "frontend": "Frontend",
+    "developer": "Developer",
+    "subtitle": "Crafting beautiful and functional web experiences with modern technologies. Passionate about clean code, user experience, and bringing ideas to life.",
+    "cta": "Explore My Work",
+    "contactBtn": "Learn More About Me",
+    "dynamicRoles": [
+      "Frontend Developer",
+      "React Specialist", 
+      "UI/UX Enthusiast",
+      "JavaScript Expert"
+    ]
+  },
+  "about": {
+    "pageDescription": "Expert Frontend Developer | 3+ Years Experience | React & JavaScript Specialist",
+    "subtitle": "Passionate about creating exceptional digital experiences through clean code, innovative design, and user-centered development.",
+    "myStory": "My Story",
+    "storyText": "I'm a passionate frontend developer with a love for creating beautiful, functional web experiences.",
+    "myStoryParagraph2": "My journey in web development has been driven by curiosity and a constant desire to learn and improve. I specialize in React, JavaScript, and modern frontend technologies.",
+    "myStoryParagraph3": "When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community.",
+    "performanceFocused": "Performance Focused",
+    "accessibleInterfaces": "Accessible Interfaces",
+    "whyChooseMe": {
+      "sectionLabel": "Why Choose Me",
+      "title": "What Makes Me Different",
+      "subtitle": "Combining technical expertise with creative problem-solving to deliver exceptional results."
+    },
+    "professionalJourney": {
+      "title": "From Dreams to Reality"
+    },
+    "technicalSkills": "Technical Skills",
+    "whatDrivesMe": "What Drives Me",
+    "philosophy": "The best way to predict the future is to create it.",
+    "philosophyAuthor": "— Peter Drucker",
+    "cta": "Let's Work Together",
+    "ctaDescription": "Ready to bring your ideas to life? Let's create something amazing together.",
+    "startConversation": "Start a Conversation",
+    "skillsCategories": {
+      "coreFrontend": "Core Frontend",
+      "stylingUI": "Styling & UI",
+      "stateManagement": "State Management", 
+      "performanceTools": "Performance & Tools",
+      "designTools": "Design Tools",
+      "versionControl": "Version Control",
+      "testingQuality": "Testing & Quality",
+      "additional": "Additional Skills"
+    }
+  },
+  "language": {
+    "selector": "Language"
+  }
+}
