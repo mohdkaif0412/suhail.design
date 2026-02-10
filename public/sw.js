@@ -1,4 +1,4 @@
-const CACHE_VERSION = '1.2.0';
+const CACHE_VERSION = '1.3.0';
 const CACHE_NAME = `himanshu-portfolio-v${CACHE_VERSION}`;
 const STATIC_CACHE_NAME = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE_NAME = `dynamic-${CACHE_VERSION}`;
@@ -73,11 +73,20 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  // Skip ALL API requests - never cache or intercept them
+  if (event.request.url.includes('/api/')) {
+    return; // Let the browser handle API calls directly
+  }
+
+  // Skip POST, PUT, DELETE requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
   // Skip caching for development files and local development
   if (
     event.request.url.includes('?t=') ||
-    event.request.url.includes('localhost:3001/src/') ||
-    event.request.url.includes('localhost:3000') ||
+    event.request.url.includes('localhost') ||
     event.request.url.includes('127.0.0.1')
   ) {
     return; // Let the browser handle it normally

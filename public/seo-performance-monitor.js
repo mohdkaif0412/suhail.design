@@ -50,7 +50,7 @@ class PerformanceMonitor {
       try {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (e) {
-        console.warn('LCP observation not supported');
+        // LCP observation not supported
       }
 
       // Observe FID (First Input Delay)
@@ -64,7 +64,7 @@ class PerformanceMonitor {
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
       } catch (e) {
-        console.warn('FID observation not supported');
+        // FID observation not supported
       }
 
       // Observe CLS (Cumulative Layout Shift)
@@ -82,7 +82,7 @@ class PerformanceMonitor {
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (e) {
-        console.warn('CLS observation not supported');
+        // CLS observation not supported
       }
 
       // Observe FCP (First Contentful Paint)
@@ -98,7 +98,7 @@ class PerformanceMonitor {
       try {
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (e) {
-        console.warn('FCP observation not supported');
+        // FCP observation not supported
       }
     }
 
@@ -157,11 +157,6 @@ class PerformanceMonitor {
       value <= threshold ? 'good' : value <= threshold * 1.5 ? 'needs-improvement' : 'poor';
     this.metrics[`${metric}_status`] = status;
 
-    // Report to console in development (browser-compatible check)
-    if (this.isDevelopment()) {
-      console.log(`Core Web Vital - ${metric}: ${value}ms (${status})`);
-    }
-
     // Send to analytics in production
     this.sendToAnalytics(metric, value, status);
   }
@@ -211,7 +206,7 @@ class PerformanceMonitor {
         // });
       }
     } catch (error) {
-      console.warn('Failed to report SEO metrics:', error);
+      // Failed to report SEO metrics
     }
   }
 
@@ -297,12 +292,7 @@ class PerformanceMonitor {
     const shiftObserver = new PerformanceObserver((entryList) => {
       entryList.getEntries().forEach((entry) => {
         if (entry.value > 0.1) {
-          // Significant shift
-          console.warn('Large layout shift detected:', entry);
-          // Log elements causing shifts for debugging
-          entry.sources?.forEach((source) => {
-            console.warn('Shift source:', source.node);
-          });
+          // Significant shift detected
         }
       });
     });
@@ -310,7 +300,7 @@ class PerformanceMonitor {
     try {
       shiftObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (e) {
-      console.warn('Layout shift monitoring not supported');
+      // Layout shift monitoring not supported
     }
   }
 }
