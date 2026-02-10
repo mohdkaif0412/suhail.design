@@ -88,12 +88,6 @@ export const createPersonSchema = () => ({
     qualifications: '4+ years professional experience in product & UX design',
   },
   award: ['Senior Product Design Recognition', 'User Experience Excellence Award'],
-  sameAs: [
-    'https://dribbble.com/suhail',
-    'https://www.linkedin.com/in/suuhail01/',
-    'https://x.com/Suhail_',
-    'https://www.behance.net/himanshu_rawat',
-  ],
   workLocation: {
     '@type': 'Place',
     address: {

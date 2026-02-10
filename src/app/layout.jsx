@@ -133,12 +133,6 @@ export default function RootLayout({ children }) {
                 addressRegion: 'Delhi',
                 addressCountry: 'India'
               },
-              sameAs: [
-                'https://github.com/himanrawat',
-                'https://www.linkedin.com/in/suuhail01/',
-                'https://x.com/Suhail_',
-                'https://www.behance.net/himanshu_rawat'
-              ]
             })
           }}
         />
