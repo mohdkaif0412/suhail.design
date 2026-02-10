@@ -4,7 +4,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
-import { HiUser, HiViewGrid, HiDocumentText, HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import {
+  HiUser,
+  HiViewGrid,
+  HiDocumentText,
+  HiMail,
+  HiPhone,
+  HiLocationMarker,
+} from 'react-icons/hi';
 import { Label } from '../ui/label';
 import { SimpleInput } from '../ui/SimpleInput';
 import { SimpleTextarea } from '../ui/SimpleTextarea';
@@ -72,13 +79,12 @@ const ContactSection = () => {
     }
   };
 
-
   const navLinks = [
     { title: t('nav.about'), href: '/about', icon: HiUser },
     { title: t('nav.projects'), href: '/projects', icon: HiViewGrid },
     { title: t('nav.services'), href: '/services', icon: HiDocumentText },
   ];
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -181,7 +187,8 @@ const ContactSection = () => {
             className="text-lg sm:text-xl text-neutral-300 leading-relaxed mb-8 max-w-lg"
             variants={fadeUpVariants}
           >
-            Let's impart our wisdom to one another. It doesn't have to be design expertise; anything will do, and we can cross-pollinate and have fun with it.
+            Let's impart our wisdom to one another. It doesn't have to be design expertise; anything
+            will do, and we can cross-pollinate and have fun with it.
           </motion.p>
           {/* Quick Navigation */}
           <motion.div variants={fadeUpVariants}>
@@ -190,11 +197,7 @@ const ContactSection = () => {
               {navLinks.map((link, index) => {
                 const IconComponent = link.icon;
                 return (
-                  <motion.div
-                    key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <motion.div key={index} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                     <Link
                       href={link.href}
                       className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-300 py-2"
@@ -208,7 +211,7 @@ const ContactSection = () => {
             </div>
           </motion.div>
         </motion.div>
-        
+
         {/* Contact Form Section */}
         <motion.div
           className="flex flex-col justify-center order-1 lg:order-2 bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border-[1px] border-neutral-700/50 p-6 sm:p-8 rounded-4xl shadow-neutral-400/50"
@@ -216,7 +219,10 @@ const ContactSection = () => {
         >
           <div className="mb-8">
             <h3 className="font-heading text-4xl mb-2 text-white">Get in Touch</h3>
-            <p className="text-neutral-400 mb-8">I am always looking for exciting projects to work on. Get in touch to schedule a call, or just to say hello.</p>
+            <p className="text-neutral-400 mb-8">
+              I am always looking for exciting projects to work on. Get in touch to schedule a call,
+              or just to say hello.
+            </p>
           </div>
 
           {/* Contact Form */}
@@ -241,9 +247,7 @@ const ContactSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="p-4 bg-red-900/50 border border-red-700 rounded-lg"
               >
-                <p className="text-red-200 text-sm">
-                  ❌ {errorMessage}
-                </p>
+                <p className="text-red-200 text-sm">❌ {errorMessage}</p>
               </motion.div>
             )}
 
@@ -261,7 +265,7 @@ const ContactSection = () => {
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="flex w-full flex-col space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <SimpleInput
@@ -276,7 +280,7 @@ const ContactSection = () => {
                 />
               </div>
             </div>
-            
+
             <div className="flex w-full flex-col space-y-2">
               <Label htmlFor="message">Message</Label>
               <SimpleTextarea
@@ -290,7 +294,7 @@ const ContactSection = () => {
                 disabled={isSubmitting}
               />
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}
@@ -300,7 +304,7 @@ const ContactSection = () => {
                 <span className="flex items-center justify-center gap-2">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                     className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
                   />
                   Sending...

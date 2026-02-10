@@ -72,74 +72,74 @@ self.addEventListener('activate', (event) => {
 });
 
 // Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  // Skip ALL API requests - never cache or intercept them
-  if (event.request.url.includes('/api/')) {
-    return; // Let the browser handle API calls directly
-  }
+// self.addEventListener('fetch', (event) => {
+//   // Skip ALL API requests - never cache or intercept them
+//   if (event.request.url.includes('/api/')) {
+//     return; // Let the browser handle API calls directly
+//   }
 
-  // Skip POST, PUT, DELETE requests
-  if (event.request.method !== 'GET') {
-    return;
-  }
+//   // Skip POST, PUT, DELETE requests
+//   if (event.request.method !== 'GET') {
+//     return;
+//   }
 
-  // Skip caching for development files and local development
-  if (
-    event.request.url.includes('?t=') ||
-    event.request.url.includes('localhost') ||
-    event.request.url.includes('127.0.0.1')
-  ) {
-    return; // Let the browser handle it normally
-  }
+//   // Skip caching for development files and local development
+//   if (
+//     event.request.url.includes('?t=') ||
+//     event.request.url.includes('localhost') ||
+//     event.request.url.includes('127.0.0.1')
+//   ) {
+//     return; // Let the browser handle it normally
+//   }
 
-  // Only handle http/https requests
-  if (!event.request.url.startsWith('http')) {
-    return;
-  }
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Cache hit - return response
-      if (response) {
-        return response;
-      }
+//   // Only handle http/https requests
+//   if (!event.request.url.startsWith('http')) {
+//     return;
+//   }
+//   event.respondWith(
+//     caches.match(event.request).then((response) => {
+//       // Cache hit - return response
+//       if (response) {
+//         return response;
+//       }
 
-      // Try to fetch from network
-      return fetch(event.request)
-        .then((networkResponse) => {
-          // Check if we received a valid response
-          if (
-            !networkResponse ||
-            networkResponse.status !== 200 ||
-            networkResponse.type !== 'basic'
-          ) {
-            return networkResponse;
-          }
+//       // Try to fetch from network
+//       return fetch(event.request)
+//         .then((networkResponse) => {
+//           // Check if we received a valid response
+//           if (
+//             !networkResponse ||
+//             networkResponse.status !== 200 ||
+//             networkResponse.type !== 'basic'
+//           ) {
+//             return networkResponse;
+//           }
 
-          // Clone the response for caching
-          const responseToCache = networkResponse.clone();
+//           // Clone the response for caching
+//           const responseToCache = networkResponse.clone();
 
-          // Cache in dynamic cache for non-static resources
-          const cacheToUse = urlsToCache.includes(new URL(event.request.url).pathname)
-            ? STATIC_CACHE_NAME
-            : DYNAMIC_CACHE_NAME;
+//           // Cache in dynamic cache for non-static resources
+//           const cacheToUse = urlsToCache.includes(new URL(event.request.url).pathname)
+//             ? STATIC_CACHE_NAME
+//             : DYNAMIC_CACHE_NAME;
 
-          caches.open(cacheToUse).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
+//           caches.open(cacheToUse).then((cache) => {
+//             cache.put(event.request, responseToCache);
+//           });
 
-          return networkResponse;
-        })
-        .catch(() => {
-          // If fetch fails, return a fallback response for navigation requests
-          if (event.request.mode === 'navigate') {
-            return caches.match('/index.html');
-          }
-          // For other requests, just fail gracefully
-          return new Response('Network error', { status: 408 });
-        });
-    })
-  );
-});
+//           return networkResponse;
+//         })
+//         .catch(() => {
+//           // If fetch fails, return a fallback response for navigation requests
+//           if (event.request.mode === 'navigate') {
+//             return caches.match('/index.html');
+//           }
+//           // For other requests, just fail gracefully
+//           return new Response('Network error', { status: 408 });
+//         });
+//     })
+//   );
+// });
 
 // Message event - handle messages from clients
 self.addEventListener('message', (event) => {
