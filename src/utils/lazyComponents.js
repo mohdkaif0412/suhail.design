@@ -46,13 +46,15 @@ export const NotFound = lazy(() => {
 
 // HOC for wrapping lazy components with Suspense and Error Boundary
 export const withLazyLoading = (Component, fallback = <LoaderOne />) => {
-  return React.forwardRef((props, ref) => (
+  const WrappedComponent = React.forwardRef((props, ref) => (
     <ErrorBoundary>
       <Suspense fallback={fallback}>
         <Component {...props} ref={ref} />
       </Suspense>
     </ErrorBoundary>
   ));
+  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
+  return WrappedComponent;
 };
 
 // Pre-configured lazy components

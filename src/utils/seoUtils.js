@@ -1979,7 +1979,7 @@ export const autoSubmitToIndexNow = async (pageType = 'general') => {
   }
 };
 
-export default {
+const seoUtils = {
   updatePageSEO,
   generatePageTitle,
   generateMetaDescription,
@@ -2008,3 +2008,5 @@ export default {
   submitAllPortfolioPagesToIndexNow,
   autoSubmitToIndexNow,
 };
+
+export default seoUtils;
