@@ -118,7 +118,7 @@ export async function POST(request) {
     const notificationMailOptions = {
       from: `"Mohd Suhail Portfolio" <${smtpFrom}>`,
       replyTo: email,
-      to: 'mohdkaif0412@gmail.com',
+      to: 'kaifee0412@gmail.com',
       subject: subject ? `New Contact: ${subject} - ${name}` : `New Message via Your Portfolio Contact Form - ${name}`,
       html: `
         <!DOCTYPE html>

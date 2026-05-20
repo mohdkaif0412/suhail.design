@@ -192,7 +192,7 @@ const ThatsMyJam = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-400 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={D5} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={D5} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
 
@@ -205,7 +205,7 @@ const ThatsMyJam = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-400 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={D6} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
+          <img src={D6} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
         </motion.div>
 
 
@@ -238,7 +238,7 @@ const ThatsMyJam = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-400 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={D10} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={D10} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
 
@@ -251,7 +251,7 @@ const ThatsMyJam = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-400 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={D11} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={D11} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center p-8">
@@ -272,7 +272,7 @@ const ThatsMyJam = () => {
               </h3>
             </motion.div>
               <div>
-                <img src={D12a} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
+                <img src={D12a} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
               </div>
           </div>
 
@@ -284,7 +284,7 @@ const ThatsMyJam = () => {
               </h3>
             </motion.div>
             <div >
-              <img src={D12b} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+              <img src={D12b} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </div>
         </motion.div>
@@ -309,7 +309,7 @@ const ThatsMyJam = () => {
               </h3>
             </motion.div>
             <div>
-              <img src={D13a} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
+              <img src={D13a} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={300} />
             </div>
           </div>
 
@@ -321,13 +321,10 @@ const ThatsMyJam = () => {
               </h3>
             </motion.div>
             <div>
-              <img src={D13b} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+              <img src={D13b} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </div>
         </motion.div>
-
-
-
 
         <motion.div variants={itemVariants} className=" mt-16">
           <motion.div className="text-center mb-12" data-aos="fade-up" data-aos-delay={200}>
@@ -356,9 +353,6 @@ const ThatsMyJam = () => {
           </div>
         </motion.div>
 
-
-
-
         <motion.div variants={itemVariants} className=" mt-16">
           <motion.div className="text-center mb-12" data-aos="fade-up" data-aos-delay={200}>
             <motion.h2
@@ -372,9 +366,6 @@ const ThatsMyJam = () => {
             <img src={D15} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
-
-
-
 
         <motion.div variants={itemVariants} className=" mt-16">
           <motion.div className="text-center mb-12" data-aos="fade-up" data-aos-delay={200}>
@@ -411,9 +402,6 @@ const ThatsMyJam = () => {
           </div>
         </motion.div>
 
-
-
-
         <motion.div variants={itemVariants} className=" mt-16">
           <motion.div className="text-center mb-12" data-aos="fade-up" data-aos-delay={200}>
             <motion.h2
@@ -436,7 +424,7 @@ const ThatsMyJam = () => {
       </TracingBeam>
 
       {/* Next Project Navigation */}
-      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
         <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           All Projects

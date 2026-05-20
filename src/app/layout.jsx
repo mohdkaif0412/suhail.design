@@ -1,5 +1,6 @@
 import { Inter, Fira_Code, Open_Sans } from 'next/font/google';
 import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import '../index.css';
 import Navbar from '../components/pages/Navbar';
 import I18nProvider from './providers';
@@ -138,12 +139,6 @@ const personSchema = {
     'https://www.behance.net/suuhail01',
     'https://www.figma.com/@suhail01',
   ],
-  seeks: {
-    '@type': 'Demand',
-    name: 'Product Design & UX Projects',
-    description:
-      'Available for freelance and contract product design and UX projects — B2B, B2C, SaaS, mobile, and enterprise. Contact: sirsuhail01@gmail.com',
-  },
 };
 
 export default function RootLayout({ children }) {
@@ -207,6 +202,8 @@ export default function RootLayout({ children }) {
           data-key="Pzawj/CkgIISCpwWNqFJSQ"
           strategy="lazyOnload"
         />
+
+        <GoogleAnalytics gaId="GTM-K84FZC5M" />
       </body>
     </html>
   );

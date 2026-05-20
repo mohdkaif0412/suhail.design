@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
 import { TracingBeam } from '../../../components/ui/tracing-beam';
-const AdaeloImg = '/adaelo/AdaeloImg.png';
+const AdaeloImg = '/adaelo/Adaelo.png';
 const A1 = '/adaelo/A1.png';
 const A2a = '/adaelo/A2a.png';
 const A2b = '/adaelo/A2b.png';
@@ -123,7 +123,7 @@ const Adaelo = () => {
           <img
             src={AdaeloImg}
             alt="Adaelo Music App"
-            className="w-full max-w-4xl mx-auto "
+            className="w-full mx-auto rounded-2xl shadow-2xl"
             data-aos="fade-up"
             data-aos-delay={100}
           />
@@ -350,7 +350,7 @@ const Adaelo = () => {
       </TracingBeam>
 
       {/* Next Project Navigation */}
-      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
         <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           All Projects

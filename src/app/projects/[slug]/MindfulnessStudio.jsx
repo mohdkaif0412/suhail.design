@@ -117,7 +117,7 @@ const MindfulnessStudio = () => {
           <img
             src={Mindfullness}
             alt="Mindfulness Studio"
-            className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+            className="w-full mx-auto rounded-2xl shadow-2xl"
             data-aos="fade-up"
             data-aos-delay={100}
           />
@@ -127,8 +127,8 @@ const MindfulnessStudio = () => {
           variants={itemVariants}
           className="flex flex-col justify-center items-center gap-[70px] "
         >
-          <img src={M1} alt="M1" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={150} />
-          <img src={M2} alt="M2" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
+          <img src={M1} alt="M1" className="w-full" data-aos="fade-up" data-aos-delay={150} />
+          <img src={M2} alt="M2" className="w-full" data-aos="fade-up" data-aos-delay={200} />
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center p-8">
@@ -140,7 +140,7 @@ const MindfulnessStudio = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-600 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={M3} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={M3} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center p-8">
@@ -156,8 +156,8 @@ const MindfulnessStudio = () => {
             variants={itemVariants}
             className="flex flex-col justify-center items-center gap-[50px] mb-10"
           >
-            <img src={M4a} alt="M4a" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M4b} alt="M4b" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={250} />
+            <img src={M4a} alt="M4a" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M4b} alt="M4b" className="w-full" data-aos="fade-up" data-aos-delay={250} />
           </motion.div>
         </motion.div>
 
@@ -174,8 +174,8 @@ const MindfulnessStudio = () => {
             variants={itemVariants}
             className="flex flex-col justify-center items-center gap-[70px] mb-10"
           >
-            <img src={M5a} alt="M5a" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M5b} alt="M5b" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M5a} alt="M5a" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M5b} alt="M5b" className="w-full" data-aos="fade-up" data-aos-delay={200} />
           </motion.div>
         </motion.div>
 
@@ -192,10 +192,10 @@ const MindfulnessStudio = () => {
             variants={itemVariants}
             className="flex flex-col justify-center items-center gap-[70px] mb-10"
           >
-            <img src={M6a} alt="M6a" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={250} />
-            <img src={M6b} alt="M6b" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M6c} alt="M6c" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M6d} alt="M6d" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M6a} alt="M6a" className="w-full" data-aos="fade-up" data-aos-delay={250} />
+            <img src={M6b} alt="M6b" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M6c} alt="M6c" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M6d} alt="M6d" className="w-full" data-aos="fade-up" data-aos-delay={200} />
           </motion.div>
         </motion.div>
 
@@ -208,7 +208,7 @@ const MindfulnessStudio = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-600 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={M7} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={M7} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center p-8">
@@ -220,7 +220,7 @@ const MindfulnessStudio = () => {
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-neutral-600 to-neutral-500 mx-auto rounded-full"></div>
           </motion.div>
-          <img src={M8} alt="New Section" className="max-w-xs w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
+          <img src={M8} alt="New Section" className="w-full rounded-xl shadow" data-aos="fade-up" data-aos-delay={250} />
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center p-8">
@@ -236,23 +236,23 @@ const MindfulnessStudio = () => {
             variants={itemVariants}
             className="flex flex-col justify-center items-center gap-[70px] mb-10"
           >
-            <img src={M9a} alt="M6a" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={250} />
-            <img src={M9b} alt="M6b" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9c} alt="M6c" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9d} alt="M6d" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9e} alt="M6e" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9f} alt="M6f" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9g} alt="M6g" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9h} alt="M6h" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9i} alt="M6i" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
-            <img src={M9j} alt="M6j" className="max-w-xs w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9a} alt="M6a" className="w-full" data-aos="fade-up" data-aos-delay={250} />
+            <img src={M9b} alt="M6b" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9c} alt="M6c" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9d} alt="M6d" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9e} alt="M6e" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9f} alt="M6f" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9g} alt="M6g" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9h} alt="M6h" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9i} alt="M6i" className="w-full" data-aos="fade-up" data-aos-delay={200} />
+            <img src={M9j} alt="M6j" className="w-full" data-aos="fade-up" data-aos-delay={200} />
           </motion.div>
         </motion.div>
       </motion.section>
       </TracingBeam>
 
       {/* Next Project Navigation */}
-      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
         <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           All Projects

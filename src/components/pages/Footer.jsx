@@ -172,19 +172,6 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Nav Links */}
-          <motion.nav aria-label="Footer navigation" className="flex justify-center gap-6 pb-8" variants={fadeUpVariants}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="flex items-center gap-1.5 text-neutral-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                <link.icon className="w-4 h-4" />
-                {link.title}
-              </Link>
-            ))}
-          </motion.nav>
 
           {/* Bottom Section */}
           <motion.div
