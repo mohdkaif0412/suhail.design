@@ -555,6 +555,38 @@ const AcadAllyTeacher = () => {
       </motion.section>
       </TracingBeam>
 
+      {/* Services CTA */}
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-12">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-xs text-neutral-500 uppercase tracking-widest mb-2">Work with Mohd Suhail</p>
+            <h3 className="text-xl font-heading font-bold text-white mb-2">Need similar UX work for your product?</h3>
+            <p className="text-neutral-400 text-sm max-w-md">From UX research to high-fidelity design systems — I help startups and enterprises create user-centered products that drive measurable outcomes.</p>
+          </div>
+          <Link
+            href="/services"
+            className="flex-shrink-0 px-6 py-3 bg-[#FF8A00] text-white font-semibold rounded-lg hover:bg-[#e07800] transition-colors duration-200 text-sm"
+          >
+            View Services →
+          </Link>
+        </div>
+      </div>
+
+      {/* Next Project Navigation */}
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+        <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          All Projects
+        </Link>
+        <div className="text-center">
+          <p className="text-xs text-neutral-500 uppercase tracking-widest mb-1">Next Case Study</p>
+          <Link href="/projects/mindfulness-studio" className="text-lg font-heading font-bold text-white hover:text-[#FF8A00] transition-colors duration-200 flex items-center gap-2">
+            Mindfulness Studio
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </Link>
+        </div>
+      </div>
+
       <Footer />
     </main>
   );

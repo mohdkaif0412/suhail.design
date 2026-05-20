@@ -57,9 +57,9 @@ const DesignProcessSection = ({
               className="[&>*]:!bg-transparent"
             >
               <div className="max-w-sm">
-                <h2 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
+                <h3 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
                   Research
-                </h2>
+                </h3>
                 <p className="font-body text-base leading-relaxed">
                   Understanding users should be one of the first goals of any product team, which is why
                   user research methods are designed to be used early on in the product development
@@ -72,7 +72,7 @@ const DesignProcessSection = ({
               </div>
               <img
                 src="/FirstDesign.svg"
-                alt="linear demo image"
+                alt="Mohd Suhail design process illustration"
                 className="w-64 h-64 absolute -right-6 lg:-right-[2%] grayscale filter -bottom-15 object-contain rounded-2xl hidden md:block"
               />
             </WobbleCard>
@@ -88,9 +88,9 @@ const DesignProcessSection = ({
               containerClassName="h-full !bg-neutral-800"
               className="[&>*]:!bg-transparent"
             >
-              <h2 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
+              <h3 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
                 Design
-              </h2>
+              </h3>
               <p className="font-body text-base leading-relaxed">
                 I create solutions to the problems uncovered by research.
               </p>
@@ -111,9 +111,9 @@ const DesignProcessSection = ({
               className="[&>*]:!bg-transparent"
             >
               <div className="max-w-xl">
-                <h2 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
+                <h3 className="font-heading text-3xl font-bold text-neutral-100 mb-2">
                   Validate
-                </h2>
+                </h3>
                 <p className="mt-6 font-body text-base leading-relaxed">
                   I check how effective the designs are.
                 </p>
@@ -127,7 +127,7 @@ const DesignProcessSection = ({
               </div>
               <img
                 src="/SecondDesign.svg"
-                alt="linear demo image"
+                alt="Mohd Suhail design process illustration"
                 className="w-96 h-96 absolute -right-10 md:-right-[40%] lg:-right-[5%] -bottom-5 object-contain rounded-2xl hidden md:block"
               />
             </WobbleCard>

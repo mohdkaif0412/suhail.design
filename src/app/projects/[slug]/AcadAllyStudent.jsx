@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
@@ -220,7 +220,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">DESIGN PROCESS</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A7} alt="Design Process" data-aos="fade-up" data-aos-delay={350} />
+            <img src={A7} alt="AcadAlly UX design process — double diamond methodology" data-aos="fade-up" data-aos-delay={350} />
           </div>
         </motion.div>
 
@@ -230,7 +230,7 @@ const AcadAllyStudent = () => {
             <span >Quantitative Research</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A9} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A9} alt="AcadAlly quantitative research findings — student survey data" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -240,7 +240,7 @@ const AcadAllyStudent = () => {
             <span >Qualitative Research</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A10} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A10} alt="AcadAlly qualitative research — user interview insights" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -254,13 +254,13 @@ const AcadAllyStudent = () => {
           </p>
 
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A11} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A11} alt="AcadAlly student persona — daily energy level mapping" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A11a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A11a} alt="AcadAlly student persona profile 1 — Rahul, Class 9" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A11b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A11b} alt="AcadAlly student persona profile 2 — Priya, Class 10" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -269,7 +269,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">EMPATHY MAPPING</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A12} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A12} alt="AcadAlly empathy map — student thoughts, feelings, and pain points" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -278,7 +278,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">COMPETITIVE ANALYSIS</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A13} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A13} alt="AcadAlly competitive analysis — existing education app comparison" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -288,7 +288,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">INFORMATION ARCHITECTURE</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A14} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A14} alt="AcadAlly information architecture — app navigation structure" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -298,34 +298,34 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">DESIGN SYSTEM</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15a} alt="AcadAlly design system — color palette and typography" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15b} alt="AcadAlly design system — button and input components" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15c} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15c} alt="AcadAlly design system — icon library" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15d} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15d} alt="AcadAlly design system — card and list components" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15e} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15e} alt="AcadAlly design system — navigation components" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15f} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15f} alt="AcadAlly design system — form elements" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15g} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15g} alt="AcadAlly design system — modal and overlay patterns" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15h} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15h} alt="AcadAlly design system — gamification badge components" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15i} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15i} alt="AcadAlly design system — progress and reward UI" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A15j} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A15j} alt="AcadAlly design system — spacing and grid guidelines" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -335,7 +335,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">USER FLOW</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A16} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A16} alt="AcadAlly user flow — student assessment and remediation journey" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -357,28 +357,28 @@ const AcadAllyStudent = () => {
           </section>
   
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17a} alt="AcadAlly visual design — onboarding screens" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17b} alt="AcadAlly visual design — diagnostic quiz screens" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17c} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17c} alt="AcadAlly visual design — learning gap results screen" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17d} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17d} alt="AcadAlly visual design — adaptive video content screen" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17e} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17e} alt="AcadAlly visual design — gamified rewards and badges" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17f} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17f} alt="AcadAlly visual design — leaderboard and social features" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17g} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17g} alt="AcadAlly visual design — student progress dashboard" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A17h} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A17h} alt="AcadAlly visual design — desert adventure gamification theme" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -398,7 +398,7 @@ const AcadAllyStudent = () => {
           </section>
   
           <div className="w-full">
-            <img src={A18a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A18a} alt="AcadAlly accessibility checklist — WCAG compliance audit" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -412,13 +412,13 @@ const AcadAllyStudent = () => {
                 <span className="border-l-4 border-[#FF8A00] pl-3">ACCESSIBILITY CHECKLIST</span>
               </h2>
               <p className="text-sm sm:text-lg text-neutral-400 leading-relaxed">
-                I successfully incorporated proven UX laws—such as Hick’s Law, the Law of Proximity, and the Aesthetic-Usability Effect—into the student app to create a more intuitive, efficient, and engaging user experience. These principles helped streamline navigation, enhance visual hierarchy, and ensure smoother user flows throughout the application.
+                I successfully incorporated proven UX lawsâ€”such as Hickâ€™s Law, the Law of Proximity, and the Aesthetic-Usability Effectâ€”into the student app to create a more intuitive, efficient, and engaging user experience. These principles helped streamline navigation, enhance visual hierarchy, and ensure smoother user flows throughout the application.
               </p>
             </div>
           </section>
   
           <div className="w-full mt-6 sm:mt-2">
-            <img src={A19a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A19a} alt="AcadAlly UX laws applied — Hick's Law, Law of Proximity, Aesthetic-Usability Effect" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -434,42 +434,42 @@ const AcadAllyStudent = () => {
               <p className="text-sm sm:text-lg text-neutral-400 leading-relaxed">
                 These are the heuristic evaluation principles and usability guidelines I systematically
                 followed during the design and development of our student app. By applying these
-                industry-standard heuristics—such as consistency and standards, error prevention, and
-                recognition rather than recall—I ensured the app delivers a seamless, intuitive, and
+                industry-standard heuristicsâ€”such as consistency and standards, error prevention, and
+                recognition rather than recallâ€”I ensured the app delivers a seamless, intuitive, and
                 user-centered experience throughout the entire user journey.
               </p>
             </div>
           </section>
   
           <div className="w-full md:w-2/3 mt-6 sm:mt-2">
-            <img src={A20a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20a} alt="AcadAlly heuristic evaluation — visibility of system status" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12 ml-auto">
-            <img src={A20b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20b} alt="AcadAlly heuristic evaluation — match between system and real world" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12">
-            <img src={A20c} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20c} alt="AcadAlly heuristic evaluation — user control and freedom" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12 ml-auto">
-            <img src={A20d} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20d} alt="AcadAlly heuristic evaluation — consistency and standards" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12">
-            <img src={A20e} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20e} alt="AcadAlly heuristic evaluation — error prevention" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12 ml-auto">
-            <img src={A20f} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20f} alt="AcadAlly heuristic evaluation — recognition rather than recall" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12">
-            <img src={A20g} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20g} alt="AcadAlly heuristic evaluation — flexibility and efficiency" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12 ml-auto">
-            <img src={A20h} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20h} alt="AcadAlly heuristic evaluation — aesthetic and minimalist design" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12">
-            <img src={A20i} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20i} alt="AcadAlly heuristic evaluation — error recovery" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="md:w-2/3 mt-4 sm:mt-12 ml-auto">
-            <img src={A20j} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A20j} alt="AcadAlly heuristic evaluation — help and documentation" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -478,7 +478,7 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">PERFORMANCE REPORT</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A22} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A22} alt="AcadAlly performance report — usability testing results" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -558,6 +558,54 @@ const AcadAllyStudent = () => {
         </motion.div>
 
 
+        {/* Outcome & Impact — structured for semantic search and E-E-A-T */}
+        <motion.div variants={itemVariants} className="mt-8 sm:mt-16">
+          <h2 className="text-2xl sm:text-4xl font-heading mb-6" data-aos="fade-up" data-aos-delay={200}>
+            <span className="border-l-4 border-[#FF8A00] pl-3">OUTCOME & IMPACT</span>
+          </h2>
+          <p className="text-sm sm:text-lg text-neutral-400 leading-relaxed mb-8" data-aos="fade-up" data-aos-delay={250}>
+            The AcadAlly Student App shipped to production and was adopted across multiple schools within months of launch. Here are the measurable outcomes the design directly contributed to:
+          </p>
+          <div className="overflow-x-auto" data-aos="fade-up" data-aos-delay={300}>
+            <table className="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr className="border-b border-neutral-700">
+                  <th className="py-3 pr-6 text-neutral-300 font-semibold">Metric</th>
+                  <th className="py-3 pr-6 text-neutral-300 font-semibold">Result</th>
+                  <th className="py-3 text-neutral-300 font-semibold">Impact</th>
+                </tr>
+              </thead>
+              <tbody className="text-neutral-400">
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 pr-6">Schools onboarded</td>
+                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">15+</td>
+                  <td className="py-3">Institutional adoption across multiple states</td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 pr-6">Students reached</td>
+                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">14,500</td>
+                  <td className="py-3">Personalized learning delivered at scale</td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 pr-6">Teachers using the platform</td>
+                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">300</td>
+                  <td className="py-3">Educators equipped with real-time student insights</td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 pr-6">Gamification framework</td>
+                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">Octalysis (8 core drives)</td>
+                  <td className="py-3">Sustained student engagement and return usage</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-6">Accessibility compliance</td>
+                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">WCAG 2.1 AA</td>
+                  <td className="py-3">Inclusive design for all student abilities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+
         <motion.div variants={itemVariants} className="mt-8 sm:mt-16">
           <section className="flex flex-col md:flex-row-reverse items-center gap-8 ">
             <div className="md:w-1/3 flex justify-center hidden md:block" data-aos="fade-up" data-aos-delay={200}>
@@ -593,7 +641,7 @@ const AcadAllyStudent = () => {
           </section>
 
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A24a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A24a} alt="AcadAlly client schools — 15+ partner schools across India" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -602,18 +650,50 @@ const AcadAllyStudent = () => {
             <span className="border-l-4 border-[#FF8A00] pl-3">HAPPY FACES</span>
           </h2>
           <div className="w-full mt-6 sm:mt-12">
-            <img src={A25} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A25} alt="AcadAlly student satisfaction — happy user testimonials" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-16">
           <div className="w-full">
-            <img src={A26} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={A26} alt="AcadAlly final app design showcase" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
       </motion.section>
       </TracingBeam>
+
+      {/* Services CTA */}
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-12">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-xs text-neutral-500 uppercase tracking-widest mb-2">Work with Mohd Suhail</p>
+            <h3 className="text-xl font-heading font-bold text-white mb-2">Need similar UX work for your product?</h3>
+            <p className="text-neutral-400 text-sm max-w-md">From UX research to high-fidelity design systems — I help startups and enterprises create user-centered products that drive measurable outcomes.</p>
+          </div>
+          <Link
+            href="/services"
+            className="flex-shrink-0 px-6 py-3 bg-[#FF8A00] text-white font-semibold rounded-lg hover:bg-[#e07800] transition-colors duration-200 text-sm"
+          >
+            View Services →
+          </Link>
+        </div>
+      </div>
+
+      {/* Next Project Navigation */}
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+        <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          All Projects
+        </Link>
+        <div className="text-center">
+          <p className="text-xs text-neutral-500 uppercase tracking-widest mb-1">Next Case Study</p>
+          <Link href="/projects/acadally-teacher" className="text-lg font-heading font-bold text-white hover:text-[#FF8A00] transition-colors duration-200 flex items-center gap-2">
+            AcadAlly Teacher App
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </Link>
+        </div>
+      </div>
 
       <Footer />
     </main>

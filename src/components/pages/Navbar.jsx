@@ -187,7 +187,7 @@ const Navbar = () => {
               >
                 <motion.img
                   src="/logo/Favicon1.svg"
-                  alt="Suhail Logo"
+                  alt="Mohd Suhail — UI/UX Designer"
                   className="w-12 h-10 sm:w-18 sm:h-10 filter brightness-110 drop-shadow-lg"
                   whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.3 }}
@@ -195,20 +195,20 @@ const Navbar = () => {
                 {/* <div className="absolute inset-0 w-18 h-18 bg-white/10 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" /> */}
               </motion.div>
               <div className="flex flex-col justify-center">
-                <motion.h1
-                  className="text-lg sm:text-xl font-bold text-white group-hover:text-neutral-200 transition-colors duration-300 leading-tight tracking-tight"
+                <motion.span
+                  className="text-lg sm:text-xl font-bold text-white group-hover:text-neutral-200 transition-colors duration-300 leading-tight tracking-tight block"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
                   Mohd. Suhail
-                </motion.h1>
-                <motion.p
-                  className="text-xs sm:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors duration-300 font-medium tracking-wider"
+                </motion.span>
+                <motion.span
+                  className="text-xs sm:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors duration-300 font-medium tracking-wider block"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
                   UI UX & Product Designer
-                </motion.p>
+                </motion.span>
               </div>
             </Link>
           </motion.div>

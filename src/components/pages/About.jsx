@@ -26,14 +26,14 @@ const About = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariant
               variants={cardVariants}
               whileHover={{ y: -8, scale: 1.05 }}
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3">
+              <strong aria-label="5 or more years of experience" className="block text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3 not-italic">
                 5+
-              </div>
+              </strong>
               <h3 className="text-base sm:text-lg font-heading font-semibold text-neutral-200 mb-2">
                 Years of Impact
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 font-light">
-              Blending design, strategy, and AI to create digital solutions that drive impact, scale businesses, and inspire users.
+                Blending design, strategy, and AI to create digital solutions that drive impact, scale businesses, and inspire users.
               </p>
             </motion.div>
             <motion.div
@@ -45,14 +45,14 @@ const About = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariant
               whileHover={{ y: -8, scale: 1.05 }}
               transition={{ delay: 0.1 }}
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3">
+              <strong aria-label="20 or more projects delivered" className="block text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3 not-italic">
                 20+
-              </div>
+              </strong>
               <h3 className="text-base sm:text-lg font-heading font-semibold text-neutral-200 mb-2">
                 Projects Delivered
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 font-light">
-              Designed and delivered digital products at every scale, from early-stage MVPs to enterprise ecosystems.
+                Designed and delivered digital products at every scale, from early-stage MVPs to enterprise ecosystems.
               </p>
             </motion.div>
             <motion.div
@@ -64,14 +64,14 @@ const About = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariant
               whileHover={{ y: -8, scale: 1.05 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3">
+              <strong aria-label="continuous growth mindset" className="block text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3 not-italic" aria-hidden="true">
                 ∞
-              </div>
+              </strong>
               <h3 className="text-base sm:text-lg font-heading font-semibold text-neutral-200 mb-2">
                 Growth Mindset
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 font-light">
-              Continuously evolving with design systems, usability principles, accessibility standards, and emerging industry best practices.
+                Continuously evolving with design systems, usability principles, accessibility standards, and emerging industry best practices.
               </p>
             </motion.div>
             <motion.div
@@ -83,9 +83,9 @@ const About = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariant
               whileHover={{ y: -8, scale: 1.05 }}
               transition={{ delay: 0.3 }}
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3">
+              <strong aria-label="100 percent work flexibility" className="block text-3xl md:text-4xl font-heading font-bold text-neutral-100 mb-3 not-italic">
                 100%
-              </div>
+              </strong>
               <h3 className="text-base sm:text-lg font-heading font-semibold text-neutral-200 mb-2">
                 Work Flexibility
               </h3>
@@ -121,13 +121,13 @@ const About = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariant
               whileHover={{ scale: 1.02, y: -5 }}
             >
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-neutral-100 mb-6">
-              User - Centered Design
+                UX Design Skills
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
                 <div>
                   <h4 className="text-neutral-200 font-semibold mb-1 sm:mb-3 font-heading">
-                    User - Centered Design
+                    User-Centered Design
                   </h4>
                   <p className="text-sm text-neutral-400">
                     Wireframing • Prototyping • Information Architecture • Design Systems • User Flows

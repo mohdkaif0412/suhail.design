@@ -178,8 +178,8 @@ const ContactSection = () => {
               transition={{ duration: 0.8 }}
             />
             <div>
-              <h1 className="text-4xl font-bold text-white">Mohd. Suhail</h1>
-              <p className="text-neutral-400 font-medium">UI UX & Product Designer</p>
+              <p className="text-4xl font-bold text-white">Mohd. Suhail</p>
+              <p className="text-neutral-400 font-medium">UI UX &amp; Product Designer</p>
             </div>
           </motion.div>
           {/* Tagline */}

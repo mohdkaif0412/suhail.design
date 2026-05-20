@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SEO Utilities for Portfolio Website
  * Comprehensive SEO management with dynamic meta tags, structured data, and optimization
  */
@@ -742,7 +742,7 @@ export const INTERNATIONAL_SERVICE_KEYWORDS = {
   ],
   germany: [
     'Senior UX-Designer Berlin',
-    'Produktdesigner München',
+    'Produktdesigner MÃ¼nchen',
     'UX-Researcher Deutschland',
     'Design-Strategie Berater Deutschland',
     'Interaction Designer Hamburg',
@@ -752,10 +752,10 @@ export const INTERNATIONAL_SERVICE_KEYWORDS = {
     'Senior Produktdesigner Frankfurt',
     'B2B Produktdesigner Deutschland',
     'B2C UX-Designer Deutschland',
-    'SaaS Produktdesigner München',
-    'E-Commerce UX-Designer Köln',
+    'SaaS Produktdesigner MÃ¼nchen',
+    'E-Commerce UX-Designer KÃ¶ln',
     'Healthcare UX-Designer Bremen',
-    'Fintech UX-Designer Nürnberg',
+    'Fintech UX-Designer NÃ¼rnberg',
     'EdTech Produktdesigner Berlin',
     'Enterprise UX-Designer Stuttgart',
     'Mobile UX-Designer Frankfurt',
@@ -812,7 +812,7 @@ export const INTERNATIONAL_SERVICE_KEYWORDS = {
     'Interaction Prototyping Germany',
     'Micro-interaction Designer Germany',
     'UX Case Study Portfolio Germany',
-    'Produktdesigner für internationales Design Germany',
+    'Produktdesigner fÃ¼r internationales Design Germany',
   ],
 };
 
@@ -990,8 +990,8 @@ export const generateStructuredData = (page, data = {}) => {
     name: 'Mohd Suhail',
     alternateName: ['Suhail', 'Mohd Suhail'],
     jobTitle: 'Senior UI/UX Designer & Product Designer',
-    url: 'https://www.Suhail.in',
-    email: 'iam@Suhail.in',
+    url: 'https://suhail.design',
+    email: 'sirsuhail01@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Delhi',
@@ -1018,7 +1018,7 @@ export const generateStructuredData = (page, data = {}) => {
       name: 'About Mohd Suhail - Senior UI/UX Designer',
       description:
         'Professional background and skills of Mohd Suhail, Senior UI/UX Designer & Product Designer specializing in B2B and B2C product design.',
-      url: 'https://Suhail.design/about',
+      url: 'https://suhail.design/about',
     },
     projects: {
       '@context': 'https://schema.org',
@@ -1032,7 +1032,7 @@ export const generateStructuredData = (page, data = {}) => {
       },
       name: 'UI/UX Design Portfolio & Product Design Case Studies',
       description: 'Portfolio showcase of B2B and B2C product design projects and UX case studies by Mohd Suhail',
-      url: 'https://Suhail.design/projects',
+      url: 'https://suhail.design/projects',
       author: basePersonData,
     },
     contact: {
@@ -1043,7 +1043,7 @@ export const generateStructuredData = (page, data = {}) => {
         contactPoint: {
           '@type': 'ContactPoint',
           telephone: '+91-9910978079',
-          email: 'iam@Suhail.in',
+          email: 'sirsuhail01@gmail.com',
           contactType: 'customer service',
           availableLanguage: ['English', 'Hindi'],
         },
@@ -1051,7 +1051,7 @@ export const generateStructuredData = (page, data = {}) => {
       name: 'Contact Mohd Suhail - Senior UI/UX Designer',
       description:
         'Contact information for Mohd Suhail, Senior UI/UX Designer & Product Designer available for design projects and consultation.',
-      url: 'https://Suhail.design/contact',
+      url: 'https://suhail.design/contact',
     },
   };
 
@@ -1076,7 +1076,7 @@ export const updatePageSEO = (page, customData = {}) => {
   // Update canonical URL
   const canonicalLink = document.querySelector('link[rel="canonical"]');
   if (canonicalLink) {
-    const baseUrl = 'https://www.Suhail.in';
+    const baseUrl = 'https://suhail.design';
     const pageUrl = page === 'home' ? baseUrl : `${baseUrl}/${page}`;
     canonicalLink.setAttribute('href', customData.canonical || pageUrl);
   }
@@ -1110,7 +1110,7 @@ export const updateOpenGraphTags = (page, customData = {}) => {
     );
   }
   if (ogUrl) {
-    const baseUrl = 'https://www.Suhail.in';
+    const baseUrl = 'https://suhail.design';
     const pageUrl = page === 'home' ? baseUrl : `${baseUrl}/${page}`;
     ogUrl.setAttribute('content', customData.ogUrl || pageUrl);
   }
@@ -1222,13 +1222,13 @@ export const validateSEO = () => {
  */
 export const generateHreflangTags = () => {
   const languages = [
-    { lang: 'en', region: 'us', url: 'https://Suhail.design/' },
-    { lang: 'en', region: 'gb', url: 'https://Suhail.design/' },
-    { lang: 'en', region: 'ca', url: 'https://Suhail.design/' },
-    { lang: 'hi', region: 'in', url: 'https://Suhail.design/?lang=hi' },
-    { lang: 'es', region: 'es', url: 'https://Suhail.design/?lang=es' },
-    { lang: 'de', region: 'de', url: 'https://Suhail.design/?lang=de' },
-    { lang: 'fr', region: 'fr', url: 'https://Suhail.design/?lang=fr' },
+    { lang: 'en', region: 'us', url: 'https://suhail.design/' },
+    { lang: 'en', region: 'gb', url: 'https://suhail.design/' },
+    { lang: 'en', region: 'ca', url: 'https://suhail.design/' },
+    { lang: 'hi', region: 'in', url: 'https://suhail.design/?lang=hi' },
+    { lang: 'es', region: 'es', url: 'https://suhail.design/?lang=es' },
+    { lang: 'de', region: 'de', url: 'https://suhail.design/?lang=de' },
+    { lang: 'fr', region: 'fr', url: 'https://suhail.design/?lang=fr' },
   ];
 
   return languages.map(({ lang, region, url }) => ({
@@ -1259,7 +1259,7 @@ export const monitorWebVitals = () => {
 export const getLocalizedContent = (region = 'global') => {
   const localizedContent = {
     india: {
-      currency: '₹',
+      currency: 'â‚¹',
       timeZone: 'Asia/Kolkata',
       workingHours: '9:00 AM - 6:00 PM IST',
       availability: 'Available for full-time and freelance opportunities in India and globally',
@@ -1271,7 +1271,7 @@ export const getLocalizedContent = (region = 'global') => {
       availability: 'Available for remote collaboration with US-based companies',
     },
     europe: {
-      currency: '€',
+      currency: 'â‚¬',
       timeZone: 'Europe/London',
       workingHours: 'Flexible hours to match European timezone',
       availability: 'Available for remote collaboration with European clients',
@@ -1342,7 +1342,7 @@ export const generateInternalLinks = (currentPage) => {
   const relatedPages = allPages
     .filter((page) => page !== currentPage)
     .map((page) => ({
-      url: `https://Suhail.in${page}`,
+      url: `https://suhail.design${page}`,
       title: generatePageTitle(page.replace('/', '')),
       relevance: calculatePageRelevance(currentPage, page),
     }))
@@ -1380,13 +1380,13 @@ export const addBreadcrumbStructuredData = (currentPath) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://Suhail.in',
+        item: 'https://suhail.design',
       },
     ],
   };
 
   // Build breadcrumb chain
-  let currentUrl = 'https://Suhail.in';
+  let currentUrl = 'https://suhail.design';
   pathSegments.forEach((segment, index) => {
     currentUrl += `/${segment}`;
     breadcrumbList.itemListElement.push({
@@ -1408,7 +1408,7 @@ export const preloadCriticalPages = () => {
   PRIORITY_PAGES.forEach((page) => {
     const link = document.createElement('link');
     link.rel = 'preload';
-    link.href = `https://Suhail.in${page}`;
+    link.href = `https://suhail.design${page}`;
     link.as = 'document';
     document.head.appendChild(link);
   });
@@ -1438,7 +1438,7 @@ export const initializeSEOMonitoring = () => {
  */
 export const requestPageIndexing = (url = window.location.href) => {
   if (process.env.NODE_ENV === 'development') {
-    console.log(`🚀 Request indexing for: ${url}`);
+    console.log(`ðŸš€ Request indexing for: ${url}`);
     console.log('Manual steps:');
     console.log('1. Go to Google Search Console');
     console.log('2. Use URL Inspection tool');
@@ -1599,7 +1599,7 @@ const enhanceSearchAppearance = () => {
   const ogImage = document.querySelector('meta[property="og:image"]');
   if (ogImage && !ogImage.getAttribute('content').includes('https://')) {
     const currentContent = ogImage.getAttribute('content');
-    ogImage.setAttribute('content', `https://Suhail.in${currentContent}`);
+    ogImage.setAttribute('content', `https://suhail.design${currentContent}`);
   }
 };
 
@@ -1739,7 +1739,7 @@ export const validateStructuredDataSchema = () => {
       }
 
       // Validate URL patterns
-      if (data.url && !data.url.startsWith('https://Suhail.in')) {
+      if (data.url && !data.url.startsWith('https://suhail.design')) {
         issues.push(`Schema ${index + 1} has incorrect URL pattern: ${data.url}`);
       }
     } catch (error) {
@@ -1758,7 +1758,7 @@ export const validateStructuredDataSchema = () => {
 export const INTERNAL_LINK_STRUCTURE = {
   homepage: {
     links: ['/about', '/projects', '/contact', '/articles'],
-    anchor_texts: ['About Himanshu', 'Portfolio Projects', 'Hire Me', 'Tech Articles'],
+    anchor_texts: ['About Suhail', 'Portfolio Projects', 'Hire Me', 'Tech Articles'],
   },
   about: {
     links: ['/projects', '/contact', '/', '/articles'],
@@ -1847,9 +1847,9 @@ export const BACKLINK_TRACKING = {
 // IndexNow Configuration
 const INDEXNOW_CONFIG = {
   apiKey: 'f96a2bb9354643a0897f33b9ec52275c',
-  host: 'www.Suhail.in',
+  host: 'suhail.design',
   endpoint: 'https://api.indexnow.org/indexnow',
-  keyLocation: 'https://www.Suhail.in/f96a2bb9354643a0897f33b9ec52275c.txt',
+  keyLocation: 'https://suhail.design/f96a2bb9354643a0897f33b9ec52275c.txt',
 };
 
 /**
@@ -1871,14 +1871,14 @@ export const submitUrlToIndexNow = async (url) => {
     });
 
     if (response.ok) {
-      console.log(`✅ IndexNow: Successfully submitted ${url}`);
+      console.log(`âœ… IndexNow: Successfully submitted ${url}`);
       return true;
     } else {
-      console.warn(`⚠️ IndexNow: Failed to submit ${url} - Status: ${response.status}`);
+      console.warn(`âš ï¸ IndexNow: Failed to submit ${url} - Status: ${response.status}`);
       return false;
     }
   } catch (error) {
-    console.error('❌ IndexNow: Submission error:', error);
+    console.error('âŒ IndexNow: Submission error:', error);
     return false;
   }
 };
@@ -1911,14 +1911,14 @@ export const submitBulkUrlsToIndexNow = async (urls) => {
     });
 
     if (response.ok) {
-      console.log(`✅ IndexNow: Successfully submitted ${urls.length} URLs in bulk`);
+      console.log(`âœ… IndexNow: Successfully submitted ${urls.length} URLs in bulk`);
       return true;
     } else {
-      console.warn(`⚠️ IndexNow: Bulk submission failed - Status: ${response.status}`);
+      console.warn(`âš ï¸ IndexNow: Bulk submission failed - Status: ${response.status}`);
       return false;
     }
   } catch (error) {
-    console.error('❌ IndexNow: Bulk submission error:', error);
+    console.error('âŒ IndexNow: Bulk submission error:', error);
     return false;
   }
 };
@@ -1962,7 +1962,7 @@ export const submitAllPortfolioPagesToIndexNow = async () => {
 export const autoSubmitToIndexNow = async (pageType = 'general') => {
   // Only submit in production to avoid unnecessary API calls
   if (process.env.NODE_ENV !== 'production') {
-    console.log('🔄 IndexNow: Skipping submission in development mode');
+    console.log('ðŸ”„ IndexNow: Skipping submission in development mode');
     return;
   }
 

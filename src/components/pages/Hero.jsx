@@ -95,15 +95,15 @@ const Hero = React.memo(() => {
 
       <div className="relative text-center">
             <div className=" w-full bg-[#121212] flex flex-col items-center justify-center overflow-hidden rounded-md">
-              <p
+              <h1
                 className="font-heading text-[90px] sm:text-[124px] font-semibold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent relative z-10 leading-none"
               >
                 Mohd Suhail
-              </p>
+              </h1>
 
-              <p className="mt-1 mb-2 max-w-md mx-auto text-gray-300 text-base sm:text-lg font-light">
+              <h2 className="mt-1 mb-2 max-w-md mx-auto text-gray-300 text-base sm:text-lg font-light">
                 Turning Complexity Into Clarity Through Design.
-              </p>
+              </h2>
 
               <div className="w-full sm:w-[50rem] h-40 relative">
                 {/* Gradients */}
@@ -115,9 +115,9 @@ const Hero = React.memo(() => {
                 {/* Core component */}
                 <SparklesCore
                   background="transparent"
-                  minSize={0.2}
+                  minSize={0.4}
                   maxSize={1}
-                  particleDensity={1200}
+                  particleDensity={400}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                 />

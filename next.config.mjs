@@ -3,6 +3,11 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 
+  // Explicitly enable App Router
+  experimental: {
+    appDir: true,
+  },
+
   // Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],

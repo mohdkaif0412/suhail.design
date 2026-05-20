@@ -1,57 +1,81 @@
 import { Inter, Fira_Code, Open_Sans } from 'next/font/google';
+import Script from 'next/script';
 import '../index.css';
 import Navbar from '../components/pages/Navbar';
 import I18nProvider from './providers';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const firaCode = Fira_Code({ 
-  subsets: ['latin'], 
-  variable: '--font-heading',
-  weight: ['300', '400', '500', '600', '700']
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  preload: true,
 });
-const openSans = Open_Sans({ 
-  subsets: ['latin'], 
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  weight: ['500', '700'],
+  display: 'swap',
+  preload: false,
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
   variable: '--font-body',
-  weight: ['300', '400', '600', '700', '800']
+  weight: ['400', '600'],
+  display: 'swap',
+  preload: false,
 });
 
 export const metadata = {
+  metadataBase: new URL('https://suhail.design'),
   title: {
-    default: 'Mohd. Suhail - UI UX & Product Design Expert',
-    template: '%s | Mohd. Suhail Portfolio'
+    default: 'Mohd Suhail — UI/UX & Product Designer',
+    template: '%s | Mohd Suhail',
   },
-  description: 'UI/UX Designer & Product Designer with 3+ years of experience. Explore innovative design solutions and case studies in my portfolio.',
-  keywords: ['UI/UX Designer', 'Product Designer', 'Suhel', 'Suhail', 'Graphic Designer', 'Mobile app designer', 'Product designer portfolio', 'case study', 'freelance ui ux designer india'],
-  authors: [{ name: 'Mohd. Suhail' }],
-  creator: 'Mohd. Suhail',
-  metadataBase: new URL('https://www.Suhail.design'),
+  description:
+    'UI/UX Designer & Product Designer with 4+ years of experience in B2B and B2C product design. Explore case studies in user research, design systems, and human-centered design.',
+  keywords: [
+    'UI/UX Designer',
+    'Product Designer',
+    'Mohd Suhail',
+    'UX Case Studies',
+    'Design Systems',
+    'Figma',
+    'User Research',
+    'Interaction Design',
+    'freelance UI UX designer India',
+  ],
+  authors: [{ name: 'Mohd Suhail', url: 'https://suhail.design' }],
+  creator: 'Mohd Suhail',
   alternates: {
-    canonical: '/',
+    canonical: 'https://suhail.design',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocale: ['hi_IN', 'es_ES', 'de_DE', 'fr_FR'],
-    url: 'https://www.Suhail.design/',
-    siteName: 'Mohd. Suhail - UI UX & Product Designer Portfolio',
-    title: 'Mohd. Suhail - UI UX Designer | Product Designer Expert',
-    description: 'Expert Frontend Developer with 3+ years experience in React, JavaScript & TypeScript. View innovative projects and modern web solutions.',
+    url: 'https://suhail.design',
+    siteName: 'Mohd Suhail — Portfolio',
+    title: 'Mohd Suhail — UI/UX & Product Designer',
+    description:
+      'UI/UX Designer & Product Designer with 4+ years of experience. Explore B2B and B2C case studies in user research, design systems, and interaction design.',
     images: [
       {
-        url: '/logo.jpg',
+        url: '/og/home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mohd. Suhail - Expert Frontend Developer specializing in React, JavaScript, and modern web technologies',
-        type: 'image/jpeg'
-      }
+        alt: 'Mohd Suhail — UI/UX and Product Designer Portfolio',
+        type: 'image/jpeg',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mohd. Suhail - UI UX Designer | Product Designer Expert',
-    description: 'UI/UX Designer & Product Designer with 3+ years of experience. Explore innovative design solutions and case studies in my portfolio.',
-    images: ['/logo.jpg'],
+    title: 'Mohd Suhail — UI/UX & Product Designer',
+    description:
+      'UI/UX Designer & Product Designer with 4+ years experience. B2B and B2C design case studies.',
+    images: ['/og/home.jpg'],
   },
   robots: {
     index: true,
@@ -66,107 +90,82 @@ export const metadata = {
   },
   verification: {
     other: {
-      'ahrefs-site-verification': '17f1be0b4dec7dcab39a7472b4a6fd101acdb15509545e1b77f8adea8fd88766',
+      'ahrefs-site-verification':
+        '17f1be0b4dec7dcab39a7472b4a6fd101acdb15509545e1b77f8adea8fd88766',
     },
   },
   other: {
     'geo.region': 'IN-DL',
     'geo.placename': 'Delhi, India',
     'geo.position': '28.7041;77.1025',
-  }
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mohd Suhail',
+  alternateName: ['Suhail', 'Mohammad Suhail'],
+  jobTitle: 'Senior UI/UX Designer & Product Designer',
+  description:
+    'Senior Product Designer with 4+ years of professional experience in UX research, product strategy, design systems, and human-centered product design for B2B and B2C clients.',
+  url: 'https://suhail.design',
+  email: 'sirsuhail01@gmail.com',
+  image: 'https://suhail.design/og/home.jpg',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Delhi',
+    addressRegion: 'Delhi',
+    addressCountry: 'IN',
+  },
+  knowsAbout: [
+    'UI/UX Design',
+    'Product Design',
+    'UX Research',
+    'Design Systems',
+    'Figma',
+    'Prototyping',
+    'Information Architecture',
+    'Usability Testing',
+    'Interaction Design',
+    'Accessibility (WCAG)',
+    'Design Strategy',
+    'B2B Product Design',
+    'B2C Product Design',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/suuhail01/',
+    'https://www.behance.net/suuhail01',
+    'https://www.figma.com/@suhail01',
+  ],
+  seeks: {
+    '@type': 'Demand',
+    name: 'Product Design & UX Projects',
+    description:
+      'Available for freelance and contract product design and UX projects — B2B, B2C, SaaS, mobile, and enterprise. Contact: sirsuhail01@gmail.com',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${firaCode.variable} ${openSans.variable}`}>
       <head>
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-K84FZC5M');`,
-          }}
-        />
-        
-        {/* Ahrefs Analytics */}
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="Pzawj/CkgIISCpwWNqFJSQ"
-          async
-        />
-
-        {/* IndexNow Integration */}
-        <script src="/indexnow-service.js" async />
-
-        {/* Microsoft Clarity */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window,document,'clarity','script','rzcuh6iazh');`,
-          }}
-        />
-
-        {/* Structured Data - Person Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Mohd Suhail',
-              alternateName: ['Suhail', 'Suhel'],
-              jobTitle: 'UI UX Designer',
-              description: 'Expert Frontend Developer with 3+ years of professional experience in React, JavaScript, TypeScript, and modern web technologies.',
-              url: 'https://Suhail.design',
-              email: 'sirsuhail01@gmail.com',
-              telephone: '+91-8937062577',
-              image: 'https://www.Suhail.in/logo.jpg',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Delhi',
-                addressRegion: 'Delhi',
-                addressCountry: 'India'
-              },
-            })
-          }}
-        />
-
-        {/* Structured Data - Professional Service */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              name: 'Mohd. Suhail UI UX Design Services',
-              description: 'Professional frontend development services specializing in React, JavaScript, and modern web technologies',
-              url: 'https://Suhail.design',
-              provider: {
-                '@type': 'Person',
-                name: 'Mohd. Suhail'
-              }
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
       <body className={`${inter.className} bg-[#121212] text-white min-h-screen`}>
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript fallback */}
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K84FZC5M"
-            height="0" 
-            width="0" 
+            height="0"
+            width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
 
-        {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-white text-black p-2 z-50"
@@ -174,17 +173,40 @@ export default function RootLayout({ children }) {
           Skip to main content
         </a>
 
-        {/* Header with navigation */}
         <header role="banner">
           <I18nProvider>
             <Navbar />
           </I18nProvider>
         </header>
 
-        {/* Main content */}
         <main id="main-content" className="pt-20 w-full">
           {children}
         </main>
+
+        {/* GTM — afterInteractive so it never blocks initial render / LCP */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K84FZC5M');`}
+        </Script>
+
+        {/* Microsoft Clarity — afterInteractive */}
+        <Script id="clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,'clarity','script','rzcuh6iazh');`}
+        </Script>
+
+        {/* Ahrefs Analytics — lazyOnload (lowest priority, runs during idle) */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Pzawj/CkgIISCpwWNqFJSQ"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

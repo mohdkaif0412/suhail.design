@@ -44,11 +44,11 @@ const Footer = () => {
     },
   ];
 
-  // const navLinks = [
-  //   { title: t('nav.about'), href: '/about', icon: HiUser },
-  //   { title: t('nav.projects'), href: '/projects', icon: HiViewGrid },
-  //   { title: t('nav.services'), href: '/services', icon: HiDocumentText },
-  // ];
+  const navLinks = [
+    { title: t('nav.about'), href: '/about', icon: HiUser },
+    { title: t('nav.projects'), href: '/projects', icon: HiViewGrid },
+    { title: t('nav.services'), href: '/services', icon: HiDocumentText },
+  ];
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -170,7 +170,22 @@ const Footer = () => {
                 </motion.a>
               </motion.div>
             </div>
-          </motion.div>{' '}
+          </motion.div>
+
+          {/* Nav Links */}
+          <motion.nav aria-label="Footer navigation" className="flex justify-center gap-6 pb-8" variants={fadeUpVariants}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1.5 text-neutral-400 hover:text-white text-sm transition-colors duration-200"
+              >
+                <link.icon className="w-4 h-4" />
+                {link.title}
+              </Link>
+            ))}
+          </motion.nav>
+
           {/* Bottom Section */}
           <motion.div
             className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4"

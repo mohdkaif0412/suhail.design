@@ -251,6 +251,21 @@ const MindfulnessStudio = () => {
       </motion.section>
       </TracingBeam>
 
+      {/* Next Project Navigation */}
+      <div className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+        <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          All Projects
+        </Link>
+        <div className="text-center">
+          <p className="text-xs text-neutral-500 uppercase tracking-widest mb-1">Next Case Study</p>
+          <Link href="/projects/gexa-energy" className="text-lg font-heading font-bold text-white hover:text-[#FF8A00] transition-colors duration-200 flex items-center gap-2">
+            Gexa Energy Dashboard
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </Link>
+        </div>
+      </div>
+
       <Footer />
     </main>
   );

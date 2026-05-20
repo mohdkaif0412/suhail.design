@@ -1,4 +1,4 @@
-// Enhanced Structured Data for SEO - Schema.org Markup
+﻿// Enhanced Structured Data for SEO - Schema.org Markup
 // This file contains comprehensive structured data for better search engine understanding
 
 export const createPersonSchema = () => ({
@@ -9,10 +9,10 @@ export const createPersonSchema = () => ({
   jobTitle: 'Senior Product Designer & UX Designer',
   description:
     'Senior Product Designer with 4+ years of professional experience in UX research, product strategy, design systems, and human-centered product design. I create user-centric digital products and measurable product outcomes for B2B and B2C clients.',
-  url: 'https://Suhail.in',
-  email: 'iam@Suhail.in',
+  url: 'https://suhail.design',
+  email: 'sirsuhail01@gmail.com',
   telephone: '+91-9910978079',
-  image: 'https://Suhail.design/logo.jpg',
+  image: 'https://suhail.design/logo.jpg',
   birthPlace: {
     '@type': 'Place',
     name: 'India',
@@ -108,7 +108,7 @@ export const createWebsiteSchema = () => ({
   '@type': 'WebSite',
   name: 'Mohd Suhail - Product Design Portfolio',
   alternateName: ['Mohd Suhail Portfolio', 'Product Design Portfolio 2025'],
-  url: 'https://Suhail.in',
+  url: 'https://suhail.design',
   description:
     'Portfolio showcasing product and UX design case studies, design systems, and user research by Mohd Suhail. Focused on B2B and B2C product outcomes.',
   author: {
@@ -149,7 +149,7 @@ export const createWebsiteSchema = () => ({
   },
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://Suhail.design/search?q={search_term_string}',
+    target: 'https://suhail.design/search?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 });
@@ -245,9 +245,9 @@ export const createProfessionalServiceSchema = () => ({
     },
   ],
   availableLanguage: ['English', 'Hindi'],
-  url: 'https://Suhail.in',
+  url: 'https://suhail.design',
   telephone: '+91-9910978079',
-  email: 'iam@Suhail.in',
+  email: 'sirsuhail01@gmail.com',
   priceRange: '$$',
   paymentAccepted: ['Cash', 'Credit Card', 'PayPal', 'Bank Transfer'],
   currenciesAccepted: 'USD, EUR, INR, GBP, CAD',
@@ -303,14 +303,14 @@ export const createArticleSchema = (article) => ({
   author: {
     '@type': 'Person',
     name: 'Mohd Suhail',
-    url: 'https://Suhail.in',
+    url: 'https://suhail.design',
   },
   publisher: {
     '@type': 'Person',
     name: 'Mohd Suhail',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://Suhail.design/logo.jpg',
+      url: 'https://suhail.design/logo.jpg',
     },
   },
   mainEntityOfPage: {
@@ -329,12 +329,12 @@ export const createOrganizationSchema = () => ({
   '@type': 'Organization',
   name: 'Mohd Suhail Product Design',
   alternateName: 'Mohd Suhail Portfolio',
-  url: 'https://Suhail.in',
-  logo: 'https://Suhail.design/logo.jpg',
-  image: 'https://Suhail.design/logo.jpg',
+  url: 'https://suhail.design',
+  logo: 'https://suhail.design/logo.jpg',
+  image: 'https://suhail.design/logo.jpg',
   description:
     'Product design and UX services specializing in UX research, design systems, prototyping, and human-centered product design.',
-  email: 'iam@Suhail.in',
+  email: 'sirsuhail01@gmail.com',
   telephone: '+91-9910978079',
   address: {
     '@type': 'PostalAddress',
@@ -356,7 +356,11 @@ export const createOrganizationSchema = () => ({
     'Accessibility (WCAG)',
     'Service Design',
   ],
-  sameAs: ['https://dribbble.com/suhail', 'https://www.linkedin.com/in/suuhail01/'],
+  sameAs: [
+    'https://www.linkedin.com/in/suuhail01/',
+    'https://www.behance.net/suuhail01',
+    'https://www.figma.com/@suhail01',
+  ],
 });
 
 // SEO-enhanced FAQ Schema
@@ -393,7 +397,7 @@ export const createFAQSchema = () => ({
       name: 'How can I contact Mohd Suhail for a project?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can contact Mohd Suhail via email at iam@Suhail.in, phone at +91-9910978079, or through the contact form on his website at https://Suhail.design/contact. He responds to all project inquiries promptly.',
+        text: 'You can contact Mohd Suhail via email at sirsuhail01@gmail.com, phone at +91-9910978079, or through the contact form on his website at https://suhail.design/contact. He responds to all project inquiries promptly.',
       },
     },
   ],

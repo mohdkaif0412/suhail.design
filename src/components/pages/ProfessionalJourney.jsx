@@ -43,7 +43,7 @@ const experienceData = [
 ];
 
 const ProfessionalJourney = ({ containerVariants, fadeUpVariants, slideInVariants, cardVariants }) => {
-  const { t } = useTranslation();
+  useTranslation();
 
   // Stats data for the overview cards
   const stats = [
@@ -112,7 +112,7 @@ const ProfessionalJourney = ({ containerVariants, fadeUpVariants, slideInVariant
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
         >
-          {stats.map((stat, idx) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="text-center p-6 border border-neutral-700 rounded-xl bg-neutral-900/50 backdrop-blur-sm"
@@ -180,31 +180,31 @@ const ProfessionalJourney = ({ containerVariants, fadeUpVariants, slideInVariant
                           transition={{ delay: 0.2, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          <h5 className="text-base md:text-lg text-neutral-400 group-hover:text-neutral-200">
+                          <time className="block text-base md:text-lg text-neutral-400 group-hover:text-neutral-200">
                             {exp.totalYears}
-                          </h5>
+                          </time>
                           <p className="text-sm md:text-base text-neutral-400 group-hover:text-neutral-200">
                             {exp.experience}
                           </p>
                         </motion.div>
-                        <motion.h5
+                        <motion.p
                           className="col-span-12 sm:col-span-6 md:col-span-4 text-base md:text-lg group-hover:text-neutral-100 group-hover:font-bold transition-all duration-700 ease-in-out mb-2 sm:mb-0"
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
                           transition={{ delay: 0.3, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          {exp.company}
-                        </motion.h5>
-                        <motion.h5
+                          <strong className="font-normal">{exp.company}</strong>
+                        </motion.p>
+                        <motion.p
                           className="col-span-12 md:col-span-4 text-sm md:text-lg font-heading group-hover:text-neutral-100 group-hover:font-bold transition-all duration-700 ease-in-out"
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
                           transition={{ delay: 0.4, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          {exp.role}
-                        </motion.h5>
+                          <strong>{exp.role}</strong>
+                        </motion.p>
                       </div>
                     </motion.div>
                   </div>

@@ -3,6 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Projects = () => {
   const router = useRouter();
@@ -146,14 +148,17 @@ const Projects = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/40 backdrop-blur-sm">
+          <div className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/40 backdrop-blur-sm h-48 sm:h-56 md:h-64 lg:h-80">
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-transparent to-transparent z-10" />
             {/* Project image */}
-            <img
+            <Image
               src={project.image}
-              alt={project.title}
-              className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              alt={`${project.title} — UI/UX case study project thumbnail`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              priority={false}
             />{' '}
             {/* Status badge */}
             <div className="absolute top-3 md:top-4 left-3 md:left-4 z-20">
@@ -383,36 +388,26 @@ const Projects = () => {
                   </div>
                 </div>{' '}
                 {/* CTA Button */}
-                <motion.div className="inline-block">
-                  <button
-                    onClick={() => {
-                      console.log('Navigating to /projects');
-                      router.push('/projects');
-                    }}
+                <motion.div className="inline-block" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="/projects"
                     className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-neutral-200 to-neutral-100 text-neutral-900 font-semibold rounded-xl hover:from-neutral-100 hover:to-neutral-50 transition-all duration-300 group cursor-pointer relative z-10 text-sm md:text-base"
                   >
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 md:gap-3"
+                    <span>View All Projects</span>
+                    <svg
+                      className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <span>View All Projects</span>
-                      <motion.svg
-                        className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        whileHover={{ x: 3 }}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </motion.svg>
-                    </motion.div>
-                  </button>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
                 </motion.div>
               </div>{' '}
               {/* Hover Effect Overlay */}
