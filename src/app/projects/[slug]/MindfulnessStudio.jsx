@@ -8,7 +8,6 @@ import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
 import { TracingBeam } from '../../../components/ui/tracing-beam';
 const Mindfullness = '/mindfullness/Mindfullness.png';
-
 const M1 = '/mindfullness/M1.png';
 const M2 = '/mindfullness/M2.png';
 const M3 = '/mindfullness/M3.png';
