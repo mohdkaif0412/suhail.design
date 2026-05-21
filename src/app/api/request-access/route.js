@@ -73,7 +73,7 @@ export async function POST(request) {
     const notificationMail = {
       from: `"Mohd Suhail Portfolio" <${SMTP_FROM}>`,
       replyTo: isEmail(contact) ? contact : SMTP_FROM,
-      to: 'kaifee0412@gmail.com',
+      to: 'sirsuhail01@gmail.com',
       subject: `Case Study Access Request — ${name}`,
       html: `
         <!DOCTYPE html>
