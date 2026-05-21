@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cloudinary:upload": "node scripts/cloudinary-upload.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -17,7 +18,9 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
+    "@upstash/redis": "^1.38.0",
     "aos": "^2.3.4",
+    "cloudinary": "^2.10.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.12.2",
     "i18next": "^25.3.2",

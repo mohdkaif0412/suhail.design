@@ -219,7 +219,7 @@ const ContactSection = () => {
         >
           <div className="mb-8">
             <h3 className="font-heading text-4xl mb-2 text-white">Get in Touch</h3>
-            <p className="text-neutral-400 mb-8">
+            <p className="text-neutral-400">
               I am always looking for exciting projects to work on. Get in touch to schedule a call,
               or just to say hello.
             </p>

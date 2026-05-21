@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-import { TracingBeam } from '../../../components/ui/tracing-beam';
 const TeacherAcadally = '/teacher/TeacherAcadally.png';
 const B1 = '/teacher/B1.png';
 const B2 = '/teacher/B2.png';
@@ -128,7 +127,7 @@ const AcadAllyTeacher = () => {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
-      <TracingBeam className="px-4 md:px-12">
+      
         {/* Hero Section */}
         <motion.section
           initial="hidden"
@@ -553,7 +552,6 @@ const AcadAllyTeacher = () => {
         </motion.div>
 
       </motion.section>
-      </TracingBeam>
 
       {/* Services CTA */}
       <div className="max-w-6xl mx-auto px-4 md:px-12 py-12">

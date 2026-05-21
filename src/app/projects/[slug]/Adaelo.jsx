@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-import { TracingBeam } from '../../../components/ui/tracing-beam';
 const AdaeloImg = '/adaelo/Adaelo.png';
 const A1 = '/adaelo/A1.png';
 const A2a = '/adaelo/A2a.png';
@@ -109,7 +108,6 @@ const Adaelo = () => {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
-      <TracingBeam className="px-4 md:px-12">
         {/* Hero Section */}
         <motion.section
           initial="hidden"
@@ -347,7 +345,6 @@ const Adaelo = () => {
         </motion.div>
 
       </motion.section>
-      </TracingBeam>
 
       {/* Next Project Navigation */}
       <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">

@@ -53,6 +53,10 @@ export const metadata = {
   alternates: {
     canonical: 'https://suhail.design',
   },
+  icons: {
+    icon: '/logo/Favicon1.svg',
+    shortcut: '/logo/Favicon1.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

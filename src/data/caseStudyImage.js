@@ -1,0 +1,30 @@
+// Shared single image export for the case study hero.
+export const StudentAcadally = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275452/Student-acadally_tlfa5l.png';
+export const A1 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779345885/A1_h6iip3.png';
+export const A2 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275435/A2_puz264.png';
+export const A3 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275435/A3_depv87.png';
+export const A7 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779345829/A7_oe3ck5.png';
+export const A9 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275442/A9_iyvfc3.png';
+export const A10 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275441/A10_zbarjr.png';
+export const A11 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275441/A11_crhhcd.png';
+export const A11a = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275435/A11a_dnf3w4.png';
+export const A11b = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275435/A11b_solfex.png';
+export const A12 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275437/A12_azxrgx.png';
+export const A13 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275437/A13_qke1bp.png';
+export const A14 = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275438/A14_wm6vdc.png';
+export const A15a = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275438/A15a_rsntx4.png';
+export const A15b = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275439/A15b_cbzpkp.png';
+export const A15c = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275439/A15c_rapyx2.png';
+export const A15d = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275439/A15d_grje0r.png';
+export const A15e = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275440/A15e_wm1jda.png';
+export const A15f = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275441/A15f_vyodc0.png';
+export const A15g = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275441/A15g_dvrtkc.png';
+export const A15h = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275440/A15h_ry3x92.png';
+export const A15i = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275445/A15i_cremru.png';
+export const A15j = 'https://res.cloudinary.com/dhqucocyo/image/upload/v1779275442/A15j_cyocuh.png';
+
+// export const A10 = '';
+// export const A10 = '';
+// export const A10 = '';
+// export const A10 = '';
+// export const A10 = '';

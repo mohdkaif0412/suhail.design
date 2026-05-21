@@ -6,32 +6,58 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-import { TracingBeam } from '../../../components/ui/tracing-beam';
+import { StudentAcadally, 
+  A1 , 
+  A2 , 
+  A3 , 
+  A7 , 
+  A9 , 
+  A10 , 
+  A11 , 
+  A11a , 
+  A11b ,
+  A12 ,
+  A13 ,
+  A14 ,
+  A15a ,
+  A15b ,
+  A15c ,
+  A15d ,
+  A15e ,
+  A15f ,
+  A15g ,
+  A15h ,
+  A15i ,
+  A15j ,
 
-// Use string paths for images in Next.js
-const StudentAcadally = '/student/Student-acadally.png';
-const A1 = '/student/A1.png';
-const A2 = '/student/A2.png';
-const A3 = '/student/A3.png';
-const A7 = '/student/A7.png';
-const A9 = '/student/A9.png';
-const A10 = '/student/A10.png';
-const A11 = '/student/A11.png';
-const A11a = '/student/A11a.png';
-const A11b = '/student/A11b.png';
-const A12 = '/student/A12.png';
-const A13 = '/student/A13.png';
-const A14 = '/student/A14.png';
-const A15a = '/student/A15a.png';
-const A15b = '/student/A15b.png';
-const A15c = '/student/A15c.png';
-const A15d = '/student/A15d.png';
-const A15e = '/student/A15e.png';
-const A15f = '/student/A15f.png';
-const A15g = '/student/A15g.png';
-const A15h = '/student/A15h.png';
-const A15i = '/student/A15i.png';
-const A15j = '/student/A15j.png';
+
+} from '../../../data/caseStudyImage';
+
+
+
+
+// const A1 = '/student/A1.png';
+// const A2 = '/student/A2.png';
+// const A3 = '/student/A3.png';
+// const A7 = '/student/A7.png';
+// const A9 = '/student/A9.png';
+// const A10 = '/student/A10.png';
+// const A11 = '/student/A11.png';
+// const A11a = '/student/A11a.png';
+// const A11b = '/student/A11b.png';
+// const A12 = '/student/A12.png';
+// const A13 = '/student/A13.png';
+// const A14 = '/student/A14.png';
+// const A15a = '/student/A15a.png';
+// const A15b = '/student/A15b.png';
+// const A15c = '/student/A15c.png';
+// const A15d = '/student/A15d.png';
+// const A15e = '/student/A15e.png';
+// const A15f = '/student/A15f.png';
+// const A15g = '/student/A15g.png';
+// const A15h = '/student/A15h.png';
+// const A15i = '/student/A15i.png';
+// const A15j = '/student/A15j.png';
 const A16 = '/student/A16.png';
 const A17 = '/student/A17.png';
 const A17a = '/student/A17a.png';
@@ -145,7 +171,6 @@ const AcadAllyStudent = () => {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
-      <TracingBeam className="px-4 md:px-12">
         {/* Hero Section */}
         <motion.section
           initial="hidden"
@@ -661,7 +686,6 @@ const AcadAllyStudent = () => {
         </motion.div>
 
       </motion.section>
-      </TracingBeam>
 
       {/* Services CTA */}
       <div className="max-w-6xl mx-auto px-4 md:px-12 py-12">

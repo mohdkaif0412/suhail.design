@@ -96,13 +96,13 @@ const Hero = React.memo(() => {
       <div className="relative text-center">
             <div className=" w-full bg-[#121212] flex flex-col items-center justify-center overflow-hidden rounded-md">
               <h1
-                className="font-heading text-[90px] sm:text-[124px] font-semibold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent relative z-10 leading-none"
+                className="font-heading text-[90px] sm:text-[124px] font-semibold bg-gradient-to-r from-[#4672F7] to-[#A80E56] bg-clip-text text-transparent relative z-10 leading-none"
               >
                 Mohd Suhail
               </h1>
 
-              <h2 className="mt-1 mb-2 max-w-md mx-auto text-gray-300 text-base sm:text-lg font-light">
-                Turning Complexity Into Clarity Through Design.
+              <h2 className="mt-1 mb-2 max-w-lg mx-auto text-gray-300 text-base sm:text-lg font-light">
+                Turning Complexity Into Clarity Through Intelligent Design
               </h2>
 
               <div className="w-full sm:w-[50rem] h-40 relative">

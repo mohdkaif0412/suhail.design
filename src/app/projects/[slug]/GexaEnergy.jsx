@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-import { TracingBeam } from '../../../components/ui/tracing-beam';
 const Gexa = '/gexa/Gexa.png';
 const GexaVS = '/gexa/gexaVS.svg';
 const G1 = '/gexa/G1.png';
@@ -94,7 +93,6 @@ const GexaEnergy = () => {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
-      <TracingBeam className="px-4 md:px-12">
         {/* Hero Section */}
         <motion.section
           initial="hidden"
@@ -478,7 +476,6 @@ const GexaEnergy = () => {
 
 
       </motion.section>
-      </TracingBeam>
 
       {/* Next Project Navigation */}
       <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">

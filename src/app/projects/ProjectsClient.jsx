@@ -317,7 +317,7 @@ export default function ProjectsClient() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

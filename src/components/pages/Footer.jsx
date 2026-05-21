@@ -15,6 +15,14 @@ import { HiUser, HiViewGrid, HiDocumentText, HiMail, HiDownload } from 'react-ic
 const Footer = () => {
   const { t } = useTranslation();
   const pathname = usePathname();
+  const [visitCount, setVisitCount] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/visitors', { method: 'POST' })
+      .then((r) => r.json())
+      .then((data) => { if (data.count !== null) setVisitCount(data.count); })
+      .catch(() => {});
+  }, []);
 
   const iconBtns = [
     // {
@@ -118,42 +126,56 @@ const Footer = () => {
               {/* Social Links */}
               <motion.div className="flex flex-wrap gap-2 sm:gap-4" variants={fadeUpVariants}>
                 {iconBtns.map((btn, index) => (
-                  <motion.a
-                    key={index}
-                    href={btn.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative flex items-center gap-2 md:gap-3 border border-neutral-700 rounded-full px-4 py-2 text-neutral-300 hover:text-neutral-900 hover:bg-neutral-100 transition-all duration-300 ease-in-out overflow-hidden"
-                    custom={index}
-                    variants={iconButtonVariants}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {/* Background animation */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-gray-600/10 opacity-0 group-hover:opacity-100"
-                      initial={{ x: '-100%' }}
-                      whileHover={{ x: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                    
-                    <motion.span
-                      className="inline-block relative z-10"
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ duration: 0.2 }}
+                  <React.Fragment key={index}>
+                    <motion.a
+                      href={btn.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative flex items-center gap-2 md:gap-3 border border-neutral-700 rounded-full px-4 py-2 text-neutral-300 hover:text-neutral-900 hover:bg-neutral-100 transition-all duration-300 ease-in-out overflow-hidden"
+                      custom={index}
+                      variants={iconButtonVariants}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      {btn.icon}
-                    </motion.span>
-                    <motion.span
-                      className="italic relative z-10 text-sm md:text-base"
-                      initial={{ x: 0 }}
-                      whileHover={{ x: 3 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {btn.text}
-                    </motion.span>
-                  </motion.a>
+                      {/* Background animation */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-gray-600/10 opacity-0 group-hover:opacity-100"
+                        initial={{ x: '-100%' }}
+                        whileHover={{ x: 0 }}
+                        transition={{ duration: 0.3 }}
+                      />
+
+                      <motion.span
+                        className="inline-block relative z-10"
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {btn.icon}
+                      </motion.span>
+                      <motion.span
+                        className="italic relative z-10 text-sm md:text-base"
+                        initial={{ x: 0 }}
+                        whileHover={{ x: 3 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {btn.text}
+                      </motion.span>
+                    </motion.a>
+                  </React.Fragment>
                 ))}
+                {visitCount !== null && (
+                  <motion.div
+                    className="flex items-center gap-2 border border-neutral-700 rounded-full px-4 py-2 text-neutral-300"
+                    custom={iconBtns.length}
+                    variants={iconButtonVariants}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <span className="text-sm font-medium">{visitCount.toLocaleString()}</span>
+                  </motion.div>
+                )}
               </motion.div>
 
               {/* Resume Download */}

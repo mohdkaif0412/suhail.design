@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+ import { LoaderOne } from '../ui/loader';
 import {
   HiUser,
   HiViewGrid,
@@ -192,7 +193,6 @@ const Navbar = () => {
                   whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.3 }}
                 />
-                {/* <div className="absolute inset-0 w-18 h-18 bg-white/10 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" /> */}
               </motion.div>
               <div className="flex flex-col justify-center">
                 <motion.span
@@ -270,8 +270,7 @@ const Navbar = () => {
               >
                 <motion.div whileHover={{ scale: 1.2, rotate: 10 }} transition={{ duration: 0.2 }}>
                   <HiDownload className="w-4 h-4" />
-                </motion.div>
-                <span>{t('nav.resume')}</span>
+                </motion.div>                <span>{t('nav.resume')}</span>
               </HoverBorderGradient>
             </motion.div>
           </div>
