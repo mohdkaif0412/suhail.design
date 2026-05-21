@@ -342,7 +342,7 @@ const Projects = () => {
 
 
           {/* Projects Grid */}
-          <motion.div className="space-y-12 sm:space-y-16 md:space-y-24 lg:space-y-32" variants={containerVariants}>
+          <motion.div className="space-y-12 sm:space-y-16 " variants={containerVariants}>
             {projectsData.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}

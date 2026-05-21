@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import PasswordGate from '../../../components/PasswordGate';
 import { StudentAcadally, 
   A1 , 
   A2 , 
@@ -170,6 +171,7 @@ const AcadAllyStudent = () => {
   };
 
   return (
+    <PasswordGate>
     <main className="min-h-screen bg-[#121212] text-white">
         {/* Hero Section */}
         <motion.section
@@ -721,6 +723,7 @@ const AcadAllyStudent = () => {
 
       <Footer />
     </main>
+    </PasswordGate>
   );
 };
 
