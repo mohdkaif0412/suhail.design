@@ -35,15 +35,10 @@ const ArrowLeftIcon = () => (
   </svg>
 );
 
-function borderColor(focused, hasValue, isError) {
-  if (isError) return '#dc2626';
-  if (focused) return '#ffffff';
-  if (hasValue) return '#555555';
-  return '#252525';
-}
-
 function InputField({ type = 'text', placeholder, value, onChange, onKeyDown }) {
   const [focused, setFocused] = useState(false);
+  const border =
+    focused ? 'border-white' : value.length > 0 ? 'border-[#555]' : 'border-[#252525]';
   return (
     <input
       type={type}
@@ -53,25 +48,15 @@ function InputField({ type = 'text', placeholder, value, onChange, onKeyDown }) 
       onKeyDown={onKeyDown}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
-      style={{
-        width: '100%',
-        background: '#111',
-        border: `1px solid ${borderColor(focused, value.length > 0, false)}`,
-        borderRadius: 12,
-        padding: '14px 16px',
-        fontSize: 14,
-        color: '#fff',
-        outline: 'none',
-        fontFamily: 'inherit',
-        boxSizing: 'border-box',
-        transition: 'border-color 0.2s',
-      }}
+      className={`w-full bg-[#111] ${border} border rounded-xl px-4 py-3.5 text-sm text-white outline-none font-sans transition-colors duration-200 placeholder:text-[#3a3a3a]`}
     />
   );
 }
 
 function TextAreaField({ placeholder, value, onChange, rows = 4 }) {
   const [focused, setFocused] = useState(false);
+  const border =
+    focused ? 'border-white' : value.length > 0 ? 'border-[#555]' : 'border-[#252525]';
   return (
     <textarea
       placeholder={placeholder}
@@ -80,20 +65,7 @@ function TextAreaField({ placeholder, value, onChange, rows = 4 }) {
       rows={rows}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
-      style={{
-        width: '100%',
-        background: '#111',
-        border: `1px solid ${borderColor(focused, value.length > 0, false)}`,
-        borderRadius: 12,
-        padding: '14px 16px',
-        fontSize: 14,
-        color: '#fff',
-        outline: 'none',
-        fontFamily: 'inherit',
-        resize: 'none',
-        boxSizing: 'border-box',
-        transition: 'border-color 0.2s',
-      }}
+      className={`w-full bg-[#111] ${border} border rounded-xl px-4 py-3.5 text-sm text-white outline-none font-sans resize-none transition-colors duration-200 placeholder:text-[#3a3a3a]`}
     />
   );
 }
@@ -108,6 +80,7 @@ export default function PasswordGate({ children }) {
   const [unlocked, setUnlocked] = useState(false);
   const [form, setForm] = useState({ name: '', contact: '', reason: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [shake, setShake] = useState(false);
 
   const handleUnlock = () => {
@@ -121,49 +94,51 @@ export default function PasswordGate({ children }) {
     }
   };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!form.name || !form.contact || !form.reason) {
       setError('Fill everything in, please.');
       return;
     }
-    setSubmitted(true);
+    setSending(true);
     setError('');
+    try {
+      const res = await fetch('/api/request-access', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.message || 'Failed to send. Please try again.');
+      }
+    } catch {
+      setError('Network error. Please try again.');
+    } finally {
+      setSending(false);
+    }
   };
 
   if (unlocked) return <>{children}</>;
 
-  return (
-    <div style={{
-      minHeight: '100vh',
-      background: '#050505',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '24px 16px',
-      fontFamily: "'Helvetica Neue', Arial, sans-serif",
-    }}>
-      <div style={{ width: '100%', maxWidth: 420 }}>
-        <div style={{
-          background: '#0a0a0a',
-          border: '1px solid #1a1a1a',
-          borderRadius: 20,
-          overflow: 'hidden',
-          position: 'relative',
-        }}>
+  const passBorderCls = error
+    ? 'border-red-600'
+    : passFocused
+    ? 'border-white'
+    : password.length > 0
+    ? 'border-[#555]'
+    : 'border-[#252525]';
 
-          {/* Close button — goes back to projects */}
+  return (
+    <div className="min-h-screen bg-[#050505] flex items-center justify-center px-4 py-6 font-sans">
+      <div className="w-full max-w-[420px]">
+        <div className="bg-[#0a0a0a] border border-[#1a1a1a] rounded-[20px] overflow-hidden relative">
+
+          {/* Close button */}
           <button
-            onClick={() => router.push('/projects')}
-            style={{
-              position: 'absolute', top: 16, right: 16,
-              background: '#1a1a1a', border: '1px solid #252525',
-              borderRadius: '50%', width: 32, height: 32,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              cursor: 'pointer', color: '#555', zIndex: 10,
-              transition: 'color 0.2s, background 0.2s',
-            }}
-            onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = '#252525'; }}
-            onMouseLeave={e => { e.currentTarget.style.color = '#555'; e.currentTarget.style.background = '#1a1a1a'; }}
+            onClick={() => router.back()}
+            className="absolute top-4 right-4 bg-[#1a1a1a] border border-[#252525] rounded-full w-8 h-8 flex items-center justify-center text-[#555] z-10 hover:text-white hover:bg-[#252525] transition-colors duration-200 cursor-pointer"
             aria-label="Close"
           >
             <CloseIcon />
@@ -171,46 +146,32 @@ export default function PasswordGate({ children }) {
 
           {/* ── ENTER PASSWORD ── */}
           {view === 'enter' && (
-            <div style={{ padding: 28 }}>
-              <h2 style={{
-                color: '#fff', fontSize: 13, fontWeight: 800,
-                letterSpacing: '0.18em', textTransform: 'uppercase', margin: '0 0 6px',
-              }}>Enter Password</h2>
-              <p style={{ color: '#444', fontSize: 13, margin: '0 0 22px', lineHeight: 1.6 }}>
-                This project is locked. Request access at{' '}
-                <a href="mailto:sirsuhail01@gmail.com" style={{ color: '#a78bfa', textDecoration: 'none' }}>
+            <div className="p-7">
+              <h2 className="text-white text-[13px] font-extrabold tracking-[0.18em] uppercase mb-1.5">
+                Enter Password
+              </h2>
+              <p className="text-[#888] text-[13px] mb-5 leading-relaxed">
+                Request access below or mail at{' '}
+                <a
+                  href="mailto:sirsuhail01@gmail.com"
+                  className="text-white font-bold no-underline"
+                >
                   sirsuhail01@gmail.com
                 </a>
               </p>
 
-              <div style={{
-                border: '1px solid #2a2a2a', borderRadius: 14,
-                overflow: 'hidden', marginBottom: 22, background: '#000',
-              }}>
+              {/* Meme image */}
+              <div className="border border-[#2a2a2a] rounded-[14px] overflow-hidden mb-5 bg-black">
                 <img
                   src={MEME_SRC}
                   alt="Protected case study"
-                  style={{
-                    width: '100%', display: 'block', maxHeight: 260,
-                    objectFit: 'cover', objectPosition: 'center top',
-                    filter: 'brightness(0.88) contrast(1.05)',
-                  }}
+                  className="w-full block max-h-[260px] object-cover object-top brightness-[0.88] contrast-[1.05]"
                 />
               </div>
 
+              {/* Password input */}
               <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  background: '#111',
-                  border: `1px solid ${borderColor(passFocused, password.length > 0, !!error)}`,
-                  borderRadius: 12,
-                  padding: '0 14px',
-                  marginBottom: 10,
-                  transition: 'border-color 0.2s',
-                  animation: shake ? 'shake 0.4s ease' : 'none',
-                  boxSizing: 'border-box',
-                }}
+                className={`flex items-center bg-[#111] border ${passBorderCls} rounded-xl px-3.5 mb-2.5 transition-colors duration-200 ${shake ? 'animate-shake' : ''}`}
               >
                 <input
                   type={showPass ? 'text' : 'password'}
@@ -220,15 +181,11 @@ export default function PasswordGate({ children }) {
                   onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
                   onFocus={() => setPassFocused(true)}
                   onBlur={() => setPassFocused(false)}
-                  style={{
-                    flex: 1, background: 'transparent', border: 'none',
-                    outline: 'none', color: '#fff', fontSize: 14,
-                    padding: '14px 0', fontFamily: 'inherit',
-                  }}
+                  className="flex-1 bg-transparent border-none outline-none text-white text-sm py-3.5 font-sans placeholder:text-[#3a3a3a]"
                 />
                 <button
                   onClick={() => setShowPass(!showPass)}
-                  style={{ background: 'none', border: 'none', color: '#555', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
+                  className="bg-transparent border-none text-[#555] cursor-pointer p-0 flex items-center"
                   aria-label={showPass ? 'Hide password' : 'Show password'}
                 >
                   {showPass ? <EyeOffIcon /> : <EyeIcon />}
@@ -236,33 +193,19 @@ export default function PasswordGate({ children }) {
               </div>
 
               {error && (
-                <p style={{ color: '#ef4444', fontSize: 12, margin: '0 0 12px' }}>{error}</p>
+                <p className="text-red-500 text-xs mb-3">{error}</p>
               )}
 
               <button
                 onClick={handleUnlock}
-                style={{
-                  width: '100%', padding: '15px 0', borderRadius: 12,
-                  fontSize: 13, fontWeight: 800, letterSpacing: '0.12em',
-                  textTransform: 'uppercase', background: '#fff', color: '#000',
-                  border: 'none', cursor: 'pointer', marginBottom: 10, transition: 'transform 0.15s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                className="w-full py-[15px] rounded-xl text-[13px] font-extrabold tracking-[0.12em] uppercase bg-white text-black border-none cursor-pointer mb-2.5 hover:scale-[1.02] transition-transform duration-150"
               >
                 View Project →
               </button>
 
               <button
                 onClick={() => setView('request')}
-                style={{
-                  width: '100%', padding: '15px 0', borderRadius: 12,
-                  fontSize: 13, fontWeight: 700, letterSpacing: '0.08em',
-                  textTransform: 'uppercase', background: 'transparent', color: '#fff',
-                  border: '1px solid #252525', cursor: 'pointer', transition: 'background 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.background = '#111'}
-                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                className="w-full py-[15px] rounded-xl text-[13px] font-bold tracking-[0.08em] uppercase bg-transparent text-white border border-[#252525] cursor-pointer hover:bg-[#111] transition-colors duration-200"
               >
                 Request Password
               </button>
@@ -271,29 +214,22 @@ export default function PasswordGate({ children }) {
 
           {/* ── REQUEST ACCESS ── */}
           {view === 'request' && !submitted && (
-            <div style={{ padding: '28px 28px 32px' }}>
+            <div className="p-7 pb-8">
               <button
                 onClick={() => { setView('enter'); setError(''); }}
-                style={{
-                  background: 'none', border: 'none', color: '#555', cursor: 'pointer',
-                  padding: 0, display: 'flex', alignItems: 'center', gap: 6,
-                  marginBottom: 20, fontSize: 13, transition: 'color 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-                onMouseLeave={e => e.currentTarget.style.color = '#555'}
+                className="bg-transparent border-none text-[#555] cursor-pointer p-0 flex items-center gap-1.5 mb-5 text-[13px] hover:text-white transition-colors duration-200"
               >
                 <ArrowLeftIcon /> Back
               </button>
 
-              <h2 style={{
-                color: '#fff', fontSize: 13, fontWeight: 800,
-                letterSpacing: '0.18em', textTransform: 'uppercase', margin: '0 0 6px',
-              }}>Request Password</h2>
-              <p style={{ color: '#444', fontSize: 13, margin: '0 0 20px', lineHeight: 1.6 }}>
-                Tell me who you are and why you'd like to peek inside.
+              <h2 className="text-white text-[13px] font-extrabold tracking-[0.18em] uppercase mb-1.5">
+                Request Password
+              </h2>
+              <p className="text-[#444] text-[13px] mb-5 leading-relaxed">
+                Tell me who you are and why you'd like to peek inside. If your email is provided, I'll reply directly.
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div className="flex flex-col gap-2.5">
                 <InputField
                   placeholder="Your Name"
                   value={form.name}
@@ -305,69 +241,62 @@ export default function PasswordGate({ children }) {
                   onChange={(e) => { setForm({ ...form, contact: e.target.value }); setError(''); }}
                 />
                 <TextAreaField
-                  placeholder="Reason to view case study…"
+                  placeholder="Why do you want to view this case study?"
                   value={form.reason}
                   onChange={(e) => { setForm({ ...form, reason: e.target.value }); setError(''); }}
                 />
               </div>
 
               {error && (
-                <p style={{ color: '#ef4444', fontSize: 12, margin: '10px 0 0' }}>⚠️ {error}</p>
+                <p className="text-red-500 text-xs mt-2.5">⚠️ {error}</p>
               )}
 
               <button
                 onClick={handleSend}
-                style={{
-                  width: '100%', marginTop: 16, padding: '15px 0', borderRadius: 12,
-                  fontSize: 13, fontWeight: 800, letterSpacing: '0.12em',
-                  textTransform: 'uppercase', background: '#fff', color: '#000',
-                  border: 'none', cursor: 'pointer', transition: 'transform 0.15s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                disabled={sending}
+                className="w-full mt-4 py-[15px] rounded-xl text-[13px] font-extrabold tracking-[0.12em] uppercase bg-white text-black border-none cursor-pointer hover:scale-[1.02] transition-transform duration-150 disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
               >
-                Send Request
+                {sending ? 'Sending…' : 'Send Request'}
               </button>
             </div>
           )}
 
           {/* ── SUBMITTED ── */}
           {view === 'request' && submitted && (
-            <div style={{ padding: '52px 28px', textAlign: 'center' }}>
-              <div style={{ fontSize: 52, marginBottom: 16 }}>📨</div>
-              <h2 style={{
-                color: '#fff', fontSize: 13, fontWeight: 800,
-                letterSpacing: '0.18em', textTransform: 'uppercase', margin: '0 0 8px',
-              }}>Request Sent!</h2>
-              <p style={{ color: '#555', fontSize: 13, lineHeight: 1.6, margin: 0 }}>
-                I'll review your request and get back to you shortly.
+            <div className="px-7 py-[52px] text-center">
+              <div className="text-[52px] mb-4">📨</div>
+              <h2 className="text-white text-[13px] font-extrabold tracking-[0.18em] uppercase mb-2">
+                Request Sent!
+              </h2>
+              <p className="text-[#555] text-[13px] leading-relaxed">
+                I've received your request and will get back to you shortly.{' '}
+                {form.contact.includes('@') && 'Check your inbox for a confirmation.'}
               </p>
               <button
-                onClick={() => { setView('enter'); setSubmitted(false); setForm({ name: '', contact: '', reason: '' }); }}
-                style={{
-                  marginTop: 24, padding: '10px 24px', borderRadius: 10,
-                  fontSize: 12, fontWeight: 600, background: 'transparent',
-                  color: '#555', border: '1px solid #1e1e1e', cursor: 'pointer',
+                onClick={() => {
+                  setView('enter');
+                  setSubmitted(false);
+                  setForm({ name: '', contact: '', reason: '' });
                 }}
+                className="mt-6 px-6 py-2.5 rounded-[10px] text-xs font-semibold bg-transparent text-[#555] border border-[#1e1e1e] cursor-pointer"
               >
                 ← Back
               </button>
             </div>
           )}
         </div>
-
-       
-        <style>{`
-          @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-8px); }
-            40% { transform: translateX(8px); }
-            60% { transform: translateX(-6px); }
-            80% { transform: translateX(6px); }
-          }
-          input::placeholder, textarea::placeholder { color: #3a3a3a; }
-        `}</style>
       </div>
+
+      <style>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          20%  { transform: translateX(-8px); }
+          40%  { transform: translateX(8px); }
+          60%  { transform: translateX(-6px); }
+          80%  { transform: translateX(6px); }
+        }
+        .animate-shake { animation: shake 0.4s ease; }
+      `}</style>
     </div>
   );
 }
