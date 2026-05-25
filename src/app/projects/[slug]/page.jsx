@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import { LoaderOne } from '../../../components/ui/loader';
 
 const AcadAllyStudent   = dynamic(() => import('./AcadAllyStudent'),   { ssr: true });
 const AcadAllyTeacher   = dynamic(() => import('./AcadAllyTeacher'),   { ssr: true });
@@ -145,7 +146,7 @@ export default async function ProjectPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
         />
       )}
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-white">Loading...</div>}>
+      <Suspense fallback={<LoaderOne />}>
         <ProjectComponent />
       </Suspense>
     </>
