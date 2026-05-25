@@ -7,10 +7,24 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
 import PasswordGate from '../../../components/PasswordGate';
-const TeacherAcadally = '/teacher/TeacherAcadally.png';
-const B1 = '/teacher/B1.png';
-const B2 = '/teacher/B2.png';
-const B3 = '/teacher/B3.png';
+
+
+import { TeacherAcadally , 
+  A1 , 
+  B2 ,  
+  A3 ,
+
+
+
+  } from '../../../data/caseStudyImage';
+
+
+
+// const TeacherAcadally = '/teacher/TeacherAcadally.png';
+// const B1 = '/teacher/B1.png';
+// const B2 = '/teacher/B2.png';
+// const B3 = '/teacher/B3.png';
+
 const B6 = '/teacher/B6.png';
 const B7 = '/teacher/B7.png';
 const B8 = '/teacher/B8.png';
@@ -141,7 +155,7 @@ const AcadAllyTeacher = () => {
           <img
             src={TeacherAcadally}
             alt="AcadAlly Student App"
-            className="w-full max-w-5xl mx-auto"
+            className="w-full mx-auto"
             data-aos="fade-up"
             data-aos-delay={100}
           />
@@ -152,7 +166,7 @@ const AcadAllyTeacher = () => {
             {/* At AcadAlly Section */}
             <section className="flex flex-col-reverse md:flex-row items-center py-8 px-2 gap-4 sm:gap-8">
                 <div className="md:w-1/3 flex justify-center">
-                <img src={B1} alt="AcadAlly Graphic" className="w-100 h-80" data-aos="fade-up" data-aos-delay={150} />
+                <img src={A1} alt="AcadAlly Graphic" className="w-100 h-80" data-aos="fade-up" data-aos-delay={150} />
                 </div>
                 <div className="md:w-2/3"  data-aos="fade-up" data-aos-delay={200}>
                 <h1 className="text-3xl font-heading font-bold mb-4 sm:mb-6">
@@ -188,7 +202,7 @@ const AcadAllyTeacher = () => {
             {/* Problem Statement Section */}
             <section className="flex flex-col-reverse md:flex-row items-center py-8 px-2 gap-4 sm:gap-8">
                 <div className="md:w-1/3 flex justify-center">
-                <img src={B3} alt="Problem Statement Icon" className="w-100 h-80"  data-aos="fade-up" data-aos-delay={200}/>
+                <img src={A3} alt="Problem Statement Icon" className="w-100 h-80"  data-aos="fade-up" data-aos-delay={200}/>
                 </div>
                 <div className="md:w-2/3"  data-aos="fade-up" data-aos-delay={250}>
                   <h2 className="text-xl sm:text-2xl font-heading font-bold mb-4 sm:mb-6">

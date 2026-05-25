@@ -7,6 +7,10 @@ import Footer from '../../components/pages/Footer';
 import ProfessionalJourney from '../../components/pages/ProfessionalJourney';
 import Image from 'next/image';
 
+
+
+
+
 const journeyData = [
   {
     id: 1,

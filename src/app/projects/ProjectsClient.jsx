@@ -183,7 +183,8 @@ function ProjectCard({ project, index }) {
     >
       <div className="relative h-full rounded-2xl border border-neutral-800/50 p-2 md:rounded-3xl">
         <GlowingEffect spread={80} glow proximity={120} inactiveZone={0.01} borderWidth={2} blur={0} movementDuration={1} />
-        <div className="relative bg-neutral-900/50 backdrop-blur-sm rounded-xl overflow-hidden hover:border-neutral-700/50 transition-all duration-500 h-full flex flex-col">
+        <div className="relative bg-neutral-900/60 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-500 h-full flex flex-col">
+
           {/* Project Image */}
           <div className="relative h-54 overflow-hidden flex-shrink-0">
             <Image
@@ -194,34 +195,30 @@ function ProjectCard({ project, index }) {
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               priority={index < 3}
             />
-            <div className="absolute top-4 right-4 bg-neutral-800/80 backdrop-blur-sm px-3 py-1 rounded-full">
-              <span className="text-sm font-body text-neutral-300">{project.year}</span>
-            </div>
-            <div className="absolute top-4 left-4 bg-neutral-800/80 backdrop-blur-sm px-3 py-1 rounded-full border border-neutral-700/50">
-              <span className="text-sm font-body text-neutral-300 capitalize">
-                {project.category === 'webApp' ? 'Web App' : 'Mobile App'}
-              </span>
-            </div>
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/70 via-transparent to-transparent" />
           </div>
 
           {/* Project Content */}
           <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-2xl font-heading font-bold mb-3 text-neutral-100 group-hover:text-neutral-200 transition-colors duration-300">
+            <h3 className="text-xl font-heading font-bold mb-2 text-neutral-100 group-hover:text-white transition-colors duration-300">
               {project.title}
             </h3>
-            <p className="text-neutral-400 font-body mb-4 line-clamp-3 flex-grow">{project.description}</p>
+            <p className="text-neutral-400 font-body text-sm mb-4 line-clamp-3 flex-grow leading-relaxed">
+              {project.description}
+            </p>
 
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-1.5 mb-5">
               {project.tags.slice(0, 4).map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-neutral-800/50 rounded-md text-xs font-body text-neutral-300"
+                  className="px-2.5 py-1 bg-neutral-800/80 border border-neutral-700/60 rounded-md text-xs font-body text-neutral-400 hover:text-neutral-300 hover:border-neutral-600/60 transition-colors duration-200"
                 >
                   {tag}
                 </span>
               ))}
               {project.tags.length > 4 && (
-                <span className="px-2 py-1 bg-neutral-800/50 rounded-md text-xs font-body text-neutral-400">
+                <span className="px-2.5 py-1 bg-neutral-800/80 border border-neutral-700/60 rounded-md text-xs font-body text-neutral-500">
                   +{project.tags.length - 4}
                 </span>
               )}
@@ -230,13 +227,22 @@ function ProjectCard({ project, index }) {
             <div className="flex gap-3 mt-auto">
               <Link
                 href={`/projects/${project.id}`}
-                className="flex-1 bg-neutral-200 hover:bg-white text-neutral-900 px-4 py-2 rounded-lg font-body text-sm font-medium transition-colors duration-300 text-center flex items-center justify-center gap-2"
+                className="group/btn flex-1 relative overflow-hidden bg-white text-neutral-900 px-5 py-2.5 rounded-xl font-body text-sm font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 hover:shadow-[0_0_28px_rgba(255,255,255,0.28)] hover:scale-[1.02] active:scale-[0.98]"
                 aria-label={`View ${project.title} case study`}
               >
-                View Case Study
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002 2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+                <span className="relative z-10 flex items-center gap-2">
+                  View Case Study
+                  <svg
+                    className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                {/* Shimmer sweep on hover */}
+                <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-black/10 to-transparent" />
               </Link>
             </div>
           </div>
@@ -257,22 +263,29 @@ export default function ProjectsClient() {
 
   return (
     <main className="min-h-screen overflow-hidden relative" style={{ backgroundColor: '#121212' }}>
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-indigo-500/4 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-purple-500/4 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-blue-500/3 rounded-full blur-[100px] pointer-events-none" />
+
       {/* Page Header */}
       <motion.section
-        className="max-w-6xl w-full mx-auto px-4 md:px-12 pt-20 pb-12"
+        className="max-w-6xl w-full mx-auto px-4 md:px-12 pt-20 pb-12 relative"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <div className="text-center mb-12">
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight text-neutral-100"
+            className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight"
             variants={fadeUpVariants}
           >
-            Projects
+            <span className="bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
+              Projects
+            </span>
           </motion.h1>
           <motion.p
-            className="text-xl text-neutral-400 font-body max-w-4xl mx-auto mb-6"
+            className="text-lg text-neutral-400 font-body max-w-2xl mx-auto mb-6 leading-relaxed"
             variants={fadeUpVariants}
           >
             A curated collection of my UI/UX design work — showcasing user research, design systems,
@@ -282,7 +295,7 @@ export default function ProjectsClient() {
 
         {/* Project Tabs */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-16"
+          className="flex flex-wrap justify-center gap-3 mb-16"
           variants={containerVariants}
         >
           {tabs.map((tab) => (
@@ -290,17 +303,19 @@ export default function ProjectsClient() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-6 py-3 rounded-full font-heading font-medium transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full font-heading font-medium transition-all duration-300 text-sm ${
                 activeTab === tab.id
-                  ? 'bg-neutral-200 text-neutral-900 shadow-lg shadow-neutral-200/25'
-                  : 'bg-neutral-800/50 text-neutral-400 hover:bg-neutral-700/50 hover:text-neutral-300'
+                  ? 'bg-white text-neutral-900 shadow-lg shadow-white/20'
+                  : 'bg-neutral-800/60 text-neutral-400 hover:bg-neutral-700/60 hover:text-neutral-200 border border-neutral-700/50'
               }`}
               variants={tabVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {tab.label}
-              <span className="ml-2 text-sm opacity-75 font-body">({tab.count})</span>
+              <span className={`ml-2 text-xs font-body ${activeTab === tab.id ? 'opacity-60' : 'opacity-50'}`}>
+                ({tab.count})
+              </span>
             </motion.button>
           ))}
         </motion.div>
@@ -308,7 +323,7 @@ export default function ProjectsClient() {
 
       {/* Projects Grid */}
       <motion.section
-        className="max-w-6xl mx-auto px-4 md:px-12 pb-20"
+        className="max-w-6xl mx-auto px-4 md:px-12 pb-20 relative"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -317,7 +332,7 @@ export default function ProjectsClient() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

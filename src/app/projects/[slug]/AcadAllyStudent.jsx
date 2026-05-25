@@ -30,8 +30,43 @@ import { StudentAcadally,
   A15h ,
   A15i ,
   A15j ,
-
-
+  A16 ,
+  A17 ,
+  A17a ,
+  A17b ,
+  A17c ,
+  A17d ,
+  A17e ,
+  A17f ,
+  A17g ,
+  A17h ,
+  A18 ,
+  A18a ,
+  A19 ,
+  A19a ,
+  A20 ,
+  A20a ,
+  A20b ,
+  A20c ,
+  A20d ,
+  A20e ,
+  A20f ,
+  A20g ,
+  A20h ,
+  A20i ,
+  A20j ,
+  A22 ,
+  A23a ,
+  A23b ,
+  A23c ,
+  A23d ,
+  A23e ,
+  A23f ,
+  A23g ,
+  A24 ,
+  A24a ,
+  A25 ,
+  A26
 } from '../../../data/caseStudyImage';
 
 
@@ -59,43 +94,43 @@ import { StudentAcadally,
 // const A15h = '/student/A15h.png';
 // const A15i = '/student/A15i.png';
 // const A15j = '/student/A15j.png';
-const A16 = '/student/A16.png';
-const A17 = '/student/A17.png';
-const A17a = '/student/A17a.png';
-const A17b = '/student/A17b.png';
-const A17c = '/student/A17c.png';
-const A17d = '/student/A17d.png';
-const A17e = '/student/A17e.png';
-const A17f = '/student/A17f.png';
-const A17g = '/student/A17g.png';
-const A17h = '/student/A17h.png';
-const A18 = '/student/A18.png';
-const A18a = '/student/A18a.png';
-const A19 = '/student/A19.png';
-const A19a = '/student/A19a.png';
-const A20 = '/student/A20.png';
-const A20a = '/student/A20a.png';
-const A20b = '/student/A20b.png';
-const A20c = '/student/A20c.png';
-const A20d = '/student/A20d.png';
-const A20e = '/student/A20e.png';
-const A20f = '/student/A20f.png';
-const A20g = '/student/A20g.png';
-const A20h = '/student/A20h.png';
-const A20i = '/student/A20i.png';
-const A20j = '/student/A20j.png';
-const A22 = '/student/A22.png';
-const A23a = '/student/A23a.png';
-const A23b = '/student/A23b.png';
-const A23c = '/student/A23c.png';
-const A23d = '/student/A23d.png';
-const A23e = '/student/A23e.png';
-const A23f = '/student/A23f.png';
-const A23g = '/student/A23g.png';
-const A24 = '/student/A24.png';
-const A24a = '/student/A24a.png';
-const A25 = '/student/A25.png';
-const A26 = '/student/A26.png';
+// const A16 = '/student/A16.png';
+// const A17 = '/student/A17.png';
+// const A17a = '/student/A17a.png';
+// const A17b = '/student/A17b.png';
+// const A17c = '/student/A17c.png';
+// const A17d = '/student/A17d.png';
+// const A17e = '/student/A17e.png';
+// const A17f = '/student/A17f.png';
+// const A17g = '/student/A17g.png';
+// const A17h = '/student/A17h.png';
+// const A18 = '/student/A18.png';
+// const A18a = '/student/A18a.png';
+// const A19 = '/student/A19.png';
+// const A19a = '/student/A19a.png';
+// const A20 = '/student/A20.png';
+// const A20a = '/student/A20a.png';
+// const A20b = '/student/A20b.png';
+// const A20c = '/student/A20c.png';
+// const A20d = '/student/A20d.png';
+// const A20e = '/student/A20e.png';
+// const A20f = '/student/A20f.png';
+// const A20g = '/student/A20g.png';
+// const A20h = '/student/A20h.png';
+// const A20i = '/student/A20i.png';
+// const A20j = '/student/A20j.png';
+// const A22 = '/student/A22.png';
+// const A23a = '/student/A23a.png';
+// const A23b = '/student/A23b.png';
+// const A23c = '/student/A23c.png';
+// const A23d = '/student/A23d.png';
+// const A23e = '/student/A23e.png';
+// const A23f = '/student/A23f.png';
+// const A23g = '/student/A23g.png';
+// const A24 = '/student/A24.png';
+// const A24a = '/student/A24a.png';
+// const A25 = '/student/A25.png';
+// const A26 = '/student/A26.png';
 
 
 const AcadAllyStudent = () => {
@@ -184,7 +219,7 @@ const AcadAllyStudent = () => {
           <img
             src={StudentAcadally}
             alt="AcadAlly Student App"
-            className="w-full max-w-5xl mx-auto"
+            className="w-full mx-auto"
             data-aos="fade-up"
             data-aos-delay={100}
           />
@@ -584,55 +619,6 @@ const AcadAllyStudent = () => {
           </div>
         </motion.div>
 
-
-        {/* Outcome & Impact — structured for semantic search and E-E-A-T */}
-        <motion.div variants={itemVariants} className="mt-8 sm:mt-16">
-          <h2 className="text-2xl sm:text-4xl font-heading mb-6" data-aos="fade-up" data-aos-delay={200}>
-            <span className="border-l-4 border-[#FF8A00] pl-3">OUTCOME & IMPACT</span>
-          </h2>
-          <p className="text-sm sm:text-lg text-neutral-400 leading-relaxed mb-8" data-aos="fade-up" data-aos-delay={250}>
-            The AcadAlly Student App shipped to production and was adopted across multiple schools within months of launch. Here are the measurable outcomes the design directly contributed to:
-          </p>
-          <div className="overflow-x-auto" data-aos="fade-up" data-aos-delay={300}>
-            <table className="w-full text-sm text-left border-collapse">
-              <thead>
-                <tr className="border-b border-neutral-700">
-                  <th className="py-3 pr-6 text-neutral-300 font-semibold">Metric</th>
-                  <th className="py-3 pr-6 text-neutral-300 font-semibold">Result</th>
-                  <th className="py-3 text-neutral-300 font-semibold">Impact</th>
-                </tr>
-              </thead>
-              <tbody className="text-neutral-400">
-                <tr className="border-b border-neutral-800">
-                  <td className="py-3 pr-6">Schools onboarded</td>
-                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">15+</td>
-                  <td className="py-3">Institutional adoption across multiple states</td>
-                </tr>
-                <tr className="border-b border-neutral-800">
-                  <td className="py-3 pr-6">Students reached</td>
-                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">14,500</td>
-                  <td className="py-3">Personalized learning delivered at scale</td>
-                </tr>
-                <tr className="border-b border-neutral-800">
-                  <td className="py-3 pr-6">Teachers using the platform</td>
-                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">300</td>
-                  <td className="py-3">Educators equipped with real-time student insights</td>
-                </tr>
-                <tr className="border-b border-neutral-800">
-                  <td className="py-3 pr-6">Gamification framework</td>
-                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">Octalysis (8 core drives)</td>
-                  <td className="py-3">Sustained student engagement and return usage</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-6">Accessibility compliance</td>
-                  <td className="py-3 pr-6 text-[#FF8A00] font-semibold">WCAG 2.1 AA</td>
-                  <td className="py-3">Inclusive design for all student abilities</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
-
         <motion.div variants={itemVariants} className="mt-8 sm:mt-16">
           <section className="flex flex-col md:flex-row-reverse items-center gap-8 ">
             <div className="md:w-1/3 flex justify-center hidden md:block" data-aos="fade-up" data-aos-delay={200}>
@@ -690,7 +676,7 @@ const AcadAllyStudent = () => {
       </motion.section>
 
       {/* Services CTA */}
-      <div className="max-w-6xl mx-auto px-4 md:px-12 py-12">
+      <div className="max-w-6xl mx-auto  py-6 sm:py-12">
         <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-xs text-neutral-500 uppercase tracking-widest mb-2">Work with Mohd Suhail</p>
@@ -707,7 +693,7 @@ const AcadAllyStudent = () => {
       </div>
 
       {/* Next Project Navigation */}
-      <div className="max-w-6xl mx-auto px-4 md:px-12 py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">
         <Link href="/projects" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           All Projects
