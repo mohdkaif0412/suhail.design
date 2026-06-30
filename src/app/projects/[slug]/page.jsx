@@ -25,65 +25,79 @@ const projectMeta = {
   'acadally-student': {
     title: 'AcadAlly Student App — EdTech UI/UX Case Study',
     description:
-      'UX case study: AcadAlly student app — diagnostic ed-tech mobile app with adaptive assessments, learning-gap analysis, and personalised video content. UX research, IA, and high-fidelity design.',
+      'Mohd Suhail designed AcadAlly\'s student mobile app end-to-end — a diagnostic ed-tech product that identifies individual learning gaps through adaptive assessments and delivers personalised video content. Scope: UX research, information architecture, and high-fidelity Figma design.',
     image: '/PR1.png',
     keywords: 'EdTech UX design, mobile app case study, adaptive learning UX, ed-tech product design, student app design, personalized learning interface',
     industry: 'EdTech / Education',
     datePublished: '2024-06-01',
+    projectSummary:
+      'Mohd Suhail led end-to-end UX design for AcadAlly\'s student-facing mobile app — a diagnostic ed-tech product that identifies individual learning gaps through adaptive assessments and delivers personalised video content. The scope covered UX research, information architecture, and high-fidelity Figma design across the full student learning journey.',
   },
   'acadally-teacher': {
     title: 'AcadAlly Teacher App — EdTech Dashboard UI/UX Case Study',
     description:
-      'UX case study: AcadAlly teacher platform — a B2B ed-tech dashboard that streamlines learning-gap identification and personalised remediation plans. UX research, design systems, and interaction design.',
+      'Mohd Suhail designed AcadAlly\'s teacher-facing B2B dashboard — solving the challenge of helping educators identify and remediate student learning gaps at scale. Scope: UX research, design system creation, and interaction design for a data-dense B2B interface.',
     image: '/PR2.png',
     keywords: 'EdTech B2B product design, teacher dashboard UX, learning management system design, ed-tech case study, B2B SaaS UX',
     industry: 'EdTech / B2B SaaS',
     datePublished: '2024-07-01',
+    projectSummary:
+      'Mohd Suhail designed AcadAlly\'s teacher-facing B2B dashboard, solving the challenge of helping educators identify and act on student learning gaps at scale. The project covered UX research, a scalable design system, and interaction design for a data-dense remediation management interface.',
   },
   'mindfulness-studio': {
     title: 'Mindfulness Studio — Wellness App UI/UX Case Study',
     description:
-      'UX case study: Mindfulness Studio — a B2C meditation and wellness app with personalised routines, progress tracking, and smart reminders. UX research, onboarding design, and mobile UI.',
+      'Mohd Suhail designed Mindfulness Studio — a B2C meditation and wellness app — addressing impersonal, one-size-fits-all wellness experiences. The product features adaptive routines, progress tracking, and smart reminders, grounded in user research and onboarding UX.',
     image: '/PR3.png',
     keywords: 'wellness app design, meditation app UX, B2C mobile app design, health app UI, onboarding UX, mobile UX case study',
     industry: 'Health & Wellness',
     datePublished: '2024-04-01',
+    projectSummary:
+      'Mohd Suhail designed Mindfulness Studio — a B2C wellness and meditation mobile app — addressing the problem of impersonal, one-size-fits-all wellness experiences. The work produced an app with adaptive routines, progress tracking, and smart reminders, grounded in user research and best-practice onboarding UX.',
   },
   'gexa-energy': {
     title: 'Gexa Energy — Smart Dashboard UI/UX Case Study',
     description:
-      'UX case study: Gexa Energy — a smart energy management dashboard with bill tracking, usage analytics, and thermostat controls for residential customers. Data visualisation and dashboard UX.',
+      'Mohd Suhail designed an energy management dashboard for Gexa Energy residential customers, solving the problem of limited visibility into personal electricity usage and billing. Deliverables: real-time usage analytics, bill tracking, and thermostat controls via a data-rich interface.',
     image: '/PR4.png',
     keywords: 'energy dashboard UX, data visualization design, smart home app UI, utility app UX case study, dashboard design, analytics UX',
     industry: 'Energy / Utilities',
     datePublished: '2024-08-01',
+    projectSummary:
+      'Mohd Suhail designed an energy management dashboard for Gexa Energy\'s residential customers, solving the widespread problem of limited visibility into personal electricity consumption and billing. The final product gives users real-time usage analytics, bill tracking, and thermostat controls through an accessible, data-rich interface.',
   },
   'thats-my-jam': {
     title: "That's My Jam — Music Discovery App UI/UX Case Study",
     description:
-      "UX case study: That's My Jam — a B2C music discovery app connecting fans with local artists, live events, and personalised playlists. Social music-sharing UX and community design.",
+      "Mohd Suhail designed That's My Jam — a B2C music discovery app — bridging the gap between fans and local artists that mainstream platforms overlook. Deliverables: social music UX, personalised playlists, live event discovery, and community-driven artist sharing.",
     image: '/PR5.png',
     keywords: 'music app UX design, B2C mobile app case study, social platform design, music discovery UI, community app UX, playlist design',
     industry: 'Music / Entertainment',
     datePublished: '2024-05-01',
+    projectSummary:
+      "Mohd Suhail designed That's My Jam — a B2C music discovery app — to bridge the gap between music fans and local artists that mainstream platforms overlook. The project delivered a social music experience with personalised playlists, live event discovery, and community-driven artist sharing.",
   },
   'adaelo': {
     title: 'Adaelo — Music Licensing Platform UI/UX Case Study',
     description:
-      'UX case study: Adaelo — a B2B music licensing platform simplifying collaboration between artists, licensees, and label owners. Marketplace UX, search design, and licensing workflow.',
+      'Mohd Suhail designed Adaelo — a B2B music licensing marketplace — to simplify the fragmented process of music licensing between artists, licensees, and label owners. Scope: marketplace architecture, search design, and end-to-end licensing workflow UX.',
     image: '/PR6.png',
     keywords: 'music licensing platform UX, marketplace design, B2B platform case study, creative marketplace UI, music industry product design',
     industry: 'Music Tech / B2B Marketplace',
     datePublished: '2024-03-01',
+    projectSummary:
+      'Mohd Suhail designed Adaelo, a B2B music licensing marketplace, to simplify the fragmented and opaque process of music licensing between artists, licensees, and label owners. The work covered marketplace architecture, search and filtering design, and the full end-to-end licensing workflow.',
   },
   'direct-care-source': {
     title: 'Direct Care Source — Healthcare UI/UX Case Study',
     description:
-      'UX case study: Direct Care Source — a healthcare product design engagement covering concept validation, product strategy, and user-centred digital experience design for care services.',
+      'Mohd Suhail led product design for Direct Care Source — a healthcare platform connecting patients with care services — covering concept validation, product strategy, and UX design focused on patient trust, accessibility, and streamlined service discovery.',
     image: '/PR7.png',
     keywords: 'healthcare UX design, medical product design, health tech case study, care platform UI, healthcare product strategy, patient experience design',
     industry: 'Healthcare / Health Tech',
     datePublished: '2024-09-01',
+    projectSummary:
+      'Mohd Suhail led product design for Direct Care Source — a healthcare platform connecting patients with care services — covering concept validation, product strategy, and UX design. The engagement focused on building patient trust, ensuring accessibility, and streamlining the care service discovery experience.',
   },
 };
 
@@ -183,6 +197,24 @@ export default async function ProjectPage({ params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
         />
+      )}
+      {meta?.projectSummary && (
+        <section
+          aria-label="Project overview"
+          className="bg-[#121212] px-4 md:px-12 pt-8 pb-2 max-w-6xl mx-auto"
+        >
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5">
+            <p className="text-xs font-medium text-neutral-500 uppercase tracking-widest mb-2 font-body">
+              {meta.industry}
+            </p>
+            <h2 className="text-xl md:text-2xl font-heading font-bold text-neutral-100 mb-3">
+              {meta.title.split(' —')[0]}
+            </h2>
+            <p className="text-sm md:text-base text-neutral-400 font-body leading-relaxed">
+              {meta.projectSummary}
+            </p>
+          </div>
+        </section>
       )}
       <Suspense fallback={<LoaderOne />}>
         <ProjectComponent />

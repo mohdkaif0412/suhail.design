@@ -105,6 +105,28 @@ export const metadata = {
   },
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Mohd Suhail — UI/UX & Product Designer Portfolio',
+  url: 'https://suhail.design',
+  description:
+    'Portfolio and case studies of Mohd Suhail, Senior UI/UX & Product Designer with 5+ years of experience in B2B and B2C product design.',
+  author: {
+    '@type': 'Person',
+    name: 'Mohd Suhail',
+    url: 'https://suhail.design',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://suhail.design/projects',
+    },
+  },
+  inLanguage: 'en-US',
+};
+
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -153,6 +175,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${firaCode.variable} ${openSans.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

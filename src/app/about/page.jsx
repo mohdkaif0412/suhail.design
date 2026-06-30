@@ -36,6 +36,7 @@ const profilePageSchema = {
     sameAs: [
       'https://www.linkedin.com/in/suuhail01/',
       'https://www.behance.net/suuhail01',
+      'https://www.figma.com/@suhail01',
     ],
   },
 };
@@ -52,7 +53,7 @@ const breadcrumbSchema = {
 export const metadata = {
   title: 'About Mohd Suhail — Senior UI/UX Designer | Delhi, India',
   description:
-    'Meet Mohd Suhail — Senior UI/UX & Product Designer with 5+ years of experience. From ed-tech to enterprise SaaS: background, skills, and design philosophy.',
+    'Mohd Suhail is a Senior UI/UX & Product Designer based in Delhi, India, with 5+ years of experience designing B2B and B2C products across ed-tech, healthcare, energy, and music tech — available for remote freelance work worldwide.',
   alternates: {
     canonical: 'https://suhail.design/about',
   },

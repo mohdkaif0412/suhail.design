@@ -1,5 +1,23 @@
 import ProjectsClient from './ProjectsClient';
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'UI/UX Design Case Studies by Mohd Suhail',
+  description:
+    'Complete list of UI/UX and product design case studies by Mohd Suhail, covering ed-tech, healthcare, energy, music tech, and B2B SaaS.',
+  numberOfItems: 7,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'AcadAlly Student App',         url: 'https://suhail.design/projects/acadally-student' },
+    { '@type': 'ListItem', position: 2, name: 'AcadAlly Teacher App',         url: 'https://suhail.design/projects/acadally-teacher' },
+    { '@type': 'ListItem', position: 3, name: 'Mindfulness Studio',           url: 'https://suhail.design/projects/mindfulness-studio' },
+    { '@type': 'ListItem', position: 4, name: 'Gexa Energy',                  url: 'https://suhail.design/projects/gexa-energy' },
+    { '@type': 'ListItem', position: 5, name: "That's My Jam",               url: 'https://suhail.design/projects/thats-my-jam' },
+    { '@type': 'ListItem', position: 6, name: 'Adaelo',                       url: 'https://suhail.design/projects/adaelo' },
+    { '@type': 'ListItem', position: 7, name: 'Direct Care Source',           url: 'https://suhail.design/projects/direct-care-source' },
+  ],
+};
+
 const collectionPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -66,6 +84,10 @@ export default function ProjectsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
       <script
         type="application/ld+json"

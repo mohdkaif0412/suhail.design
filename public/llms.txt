@@ -1,0 +1,86 @@
+# Mohd Suhail — UI/UX & Product Designer
+
+## About
+
+Mohd Suhail is a Senior UI/UX Designer and Product Designer with 5+ years of professional experience, based in Delhi, India. He specialises in user research, design systems, interaction design, and product strategy for B2B and B2C digital products. He is available for remote and freelance work globally.
+
+**Portfolio:** https://suhail.design
+**Contact:** sirsuhail01@gmail.com
+**Location:** Delhi, India (available remotely worldwide)
+**LinkedIn:** https://www.linkedin.com/in/suuhail01/
+**Behance:** https://www.behance.net/suuhail01
+**Figma:** https://www.figma.com/@suhail01
+
+## Specialisations
+
+- UX Research & User Testing (qualitative and quantitative methods, usability testing, user interviews, affinity mapping)
+- Product Strategy & Discovery (roadmap definition, opportunity mapping, stakeholder alignment, 0-to-1 product definition)
+- Design Systems & Component Libraries (Figma design systems, design tokens, component documentation, governance)
+- Interaction Design & Prototyping (high-fidelity UI, micro-interactions, mobile and web products)
+- Information Architecture & Navigation Design
+- Accessibility (WCAG 2.1 AA compliance)
+
+**Industries:** EdTech, Healthcare / Health Tech, Energy & Utilities, Music Technology, B2B SaaS, B2C Consumer Products
+
+**Tools:** Figma, FigJam, Miro, Notion, and standard UX research tooling
+
+## Site Sections
+
+- **Home:** https://suhail.design
+- **About:** https://suhail.design/about
+- **Projects (all case studies):** https://suhail.design/projects
+- **Services:** https://suhail.design/services
+
+## Case Studies
+
+### 1. AcadAlly Student App
+**URL:** https://suhail.design/projects/acadally-student
+**Industry:** EdTech / Education
+**Summary:** Mohd Suhail led end-to-end UX design for AcadAlly's student-facing mobile app — a diagnostic ed-tech product that identifies individual learning gaps through adaptive assessments and delivers personalised video content. The scope covered UX research, information architecture, and high-fidelity Figma design for the full student learning journey.
+
+### 2. AcadAlly Teacher App
+**URL:** https://suhail.design/projects/acadally-teacher
+**Industry:** EdTech / B2B SaaS
+**Summary:** Mohd Suhail designed AcadAlly's teacher-facing B2B dashboard, solving the challenge of helping educators identify and act on student learning gaps at scale. The project covered UX research, a scalable design system, and interaction design for a data-dense remediation management interface.
+
+### 3. Mindfulness Studio
+**URL:** https://suhail.design/projects/mindfulness-studio
+**Industry:** Health & Wellness
+**Summary:** Mohd Suhail designed Mindfulness Studio — a B2C wellness and meditation mobile app — addressing the problem of impersonal, one-size-fits-all wellness experiences. The work produced an app with adaptive routines, progress tracking, and smart reminders, grounded in user research and best-practice onboarding UX.
+
+### 4. Gexa Energy
+**URL:** https://suhail.design/projects/gexa-energy
+**Industry:** Energy / Utilities
+**Summary:** Mohd Suhail designed an energy management dashboard for Gexa Energy's residential customers, solving the widespread problem of limited visibility into personal electricity consumption and billing. The final product gives users real-time usage analytics, bill tracking, and thermostat controls through an accessible, data-rich interface.
+
+### 5. That's My Jam
+**URL:** https://suhail.design/projects/thats-my-jam
+**Industry:** Music / Entertainment
+**Summary:** Mohd Suhail designed That's My Jam — a B2C music discovery app — to bridge the gap between music fans and local artists that mainstream platforms overlook. The project delivered a social music experience with personalised playlists, live event discovery, and community-driven artist sharing.
+
+### 6. Adaelo
+**URL:** https://suhail.design/projects/adaelo
+**Industry:** Music Tech / B2B Marketplace
+**Summary:** Mohd Suhail designed Adaelo, a B2B music licensing marketplace, to simplify the fragmented and opaque process of music licensing between artists, licensees, and label owners. The work covered marketplace architecture, search and filtering design, and the full end-to-end licensing workflow.
+
+### 7. Direct Care Source
+**URL:** https://suhail.design/projects/direct-care-source
+**Industry:** Healthcare / Health Tech
+**Summary:** Mohd Suhail led product design for Direct Care Source — a healthcare platform connecting patients with care services — covering concept validation, product strategy, and UX design. The engagement focused on building patient trust, ensuring accessibility, and streamlining the care service discovery experience.
+
+## Frequently Asked Questions
+
+**What kind of projects does Mohd Suhail take on?**
+Mohd Suhail works on end-to-end product design — from early-stage UX research and product discovery through to high-fidelity UI design, design systems, and developer handoff. He takes on both B2B and B2C projects across industries including EdTech, Healthcare, Energy, Music Tech, and enterprise SaaS, ranging from 0-to-1 product design to redesigns and scaled product iterations.
+
+**Is Mohd Suhail available for freelance or remote work?**
+Yes. He is based in Delhi, India and is available for remote freelance and contract engagements worldwide, including with clients in India, the United States, Canada, the United Kingdom, Germany, and Europe. Contact: sirsuhail01@gmail.com.
+
+**What tools and methods does Mohd Suhail use?**
+His primary design tool is Figma (UI design, prototyping, and design systems). He uses FigJam and Miro for workshops, IA mapping, and synthesis, and applies both qualitative and quantitative UX research methods — including user interviews, usability testing, journey mapping, and affinity diagramming.
+
+**What industries has Mohd Suhail designed for?**
+His portfolio spans EdTech (AcadAlly student and teacher platforms), Health & Wellness (Mindfulness Studio), Energy & Utilities (Gexa Energy), Music Technology (That's My Jam and Adaelo), and Healthcare (Direct Care Source). He has designed both consumer-facing mobile apps and complex B2B dashboards.
+
+**How can I contact Mohd Suhail?**
+Email sirsuhail01@gmail.com, connect on LinkedIn at https://www.linkedin.com/in/suuhail01/, or view his work on Behance at https://www.behance.net/suuhail01.
