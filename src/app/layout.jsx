@@ -117,13 +117,6 @@ const websiteSchema = {
     name: 'Mohd Suhail',
     url: 'https://suhail.design',
   },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://suhail.design/projects',
-    },
-  },
   inLanguage: 'en-US',
 };
 
