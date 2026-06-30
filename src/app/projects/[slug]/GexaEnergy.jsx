@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 import { Gexa, GexaVS, G1, G2, G3, G4, G5, G6, G7, G8, G9a, G9b, G9c, G9d, G9e, G10, G11, G12, G13} from '../../../data/caseStudyImage';
 
 
@@ -472,6 +473,8 @@ const GexaEnergy = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="gexa-energy" />
 
       <Footer />
     </main>

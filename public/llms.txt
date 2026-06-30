@@ -36,37 +36,44 @@ Mohd Suhail is a Senior UI/UX Designer and Product Designer with 5+ years of pro
 ### 1. AcadAlly Student App
 **URL:** https://suhail.design/projects/acadally-student
 **Industry:** EdTech / Education
-**Summary:** Mohd Suhail led end-to-end UX design for AcadAlly's student-facing mobile app — a diagnostic ed-tech product that identifies individual learning gaps through adaptive assessments and delivers personalised video content. The scope covered UX research, information architecture, and high-fidelity Figma design for the full student learning journey.
+**Summary:** Mohd Suhail led end-to-end UX design for AcadAlly's student-facing mobile app — a diagnostic ed-tech product that identifies individual learning gaps through adaptive assessments and delivers personalised video content. The scope covered UX research, information architecture, gamification (using the Octalysis framework), accessibility, and high-fidelity Figma design for the full student learning journey. The app is in use across 15+ schools, reaching roughly 14,500 students and 300 teachers.
+**Related case studies:** AcadAlly Teacher App (/projects/acadally-teacher), That's My Jam (/projects/thats-my-jam), Mindfulness Studio (/projects/mindfulness-studio)
 
 ### 2. AcadAlly Teacher App
 **URL:** https://suhail.design/projects/acadally-teacher
 **Industry:** EdTech / B2B SaaS
-**Summary:** Mohd Suhail designed AcadAlly's teacher-facing B2B dashboard, solving the challenge of helping educators identify and act on student learning gaps at scale. The project covered UX research, a scalable design system, and interaction design for a data-dense remediation management interface.
+**Summary:** Mohd Suhail designed AcadAlly's teacher-facing B2B dashboard, solving the challenge of helping educators identify and act on student learning gaps at scale. The project covered UX research, a scalable design system, and interaction design for a data-dense remediation management interface, validated through a student feedback survey and used across 15+ schools.
+**Related case studies:** AcadAlly Student App (/projects/acadally-student), Gexa Energy (/projects/gexa-energy), Direct Care Source (/projects/direct-care-source)
 
 ### 3. Mindfulness Studio
 **URL:** https://suhail.design/projects/mindfulness-studio
 **Industry:** Health & Wellness
-**Summary:** Mohd Suhail designed Mindfulness Studio — a B2C wellness and meditation mobile app — addressing the problem of impersonal, one-size-fits-all wellness experiences. The work produced an app with adaptive routines, progress tracking, and smart reminders, grounded in user research and best-practice onboarding UX.
+**Summary:** Mohd Suhail designed Mindfulness Studio — a B2C wellness and meditation mobile app — addressing the problem of impersonal, one-size-fits-all wellness experiences. The app is structured around time-of-day routines (morning, afternoon, and night) and custom courses for managing stress, improving sleep, boosting energy, or increasing happiness. The work produced an experience with adaptive routines, progress tracking through a user profile, and reminder notifications, grounded in user research and best-practice onboarding UX.
+**Related case studies:** Direct Care Source (/projects/direct-care-source), That's My Jam (/projects/thats-my-jam), AcadAlly Student App (/projects/acadally-student)
 
 ### 4. Gexa Energy
 **URL:** https://suhail.design/projects/gexa-energy
 **Industry:** Energy / Utilities
-**Summary:** Mohd Suhail designed an energy management dashboard for Gexa Energy's residential customers, solving the widespread problem of limited visibility into personal electricity consumption and billing. The final product gives users real-time usage analytics, bill tracking, and thermostat controls through an accessible, data-rich interface.
+**Summary:** Mohd Suhail designed an energy management dashboard for Gexa Energy's residential customers, solving the widespread problem of limited visibility into personal electricity consumption and billing. Spanning a 12-month engagement and 1000+ app screens, the work covered competitive research, user interviews, personas, process flows, a design system, and interaction design. The final product gives users real-time usage analytics, bill tracking, and smart-thermostat controls through an accessible, data-rich interface.
+**Related case studies:** AcadAlly Teacher App (/projects/acadally-teacher), Adaelo (/projects/adaelo), Direct Care Source (/projects/direct-care-source)
 
 ### 5. That's My Jam
 **URL:** https://suhail.design/projects/thats-my-jam
 **Industry:** Music / Entertainment
-**Summary:** Mohd Suhail designed That's My Jam — a B2C music discovery app — to bridge the gap between music fans and local artists that mainstream platforms overlook. The project delivered a social music experience with personalised playlists, live event discovery, and community-driven artist sharing.
+**Summary:** Mohd Suhail designed That's My Jam — a B2C music discovery app — to bridge the gap between music fans and local artists that mainstream platforms overlook. Built across two modules (a fan-facing User app and an artist/manager MDB app), the project ran through quantitative and qualitative research, personas, empathy mapping, user flows, information architecture, and a full style guide. It delivered a social music experience with personalised playlists, live concert and festival discovery, and a live song-bidding feature where the highest bidder hears their favourite track performed by the artist.
+**Related case studies:** Adaelo (/projects/adaelo), Mindfulness Studio (/projects/mindfulness-studio), AcadAlly Student App (/projects/acadally-student)
 
 ### 6. Adaelo
 **URL:** https://suhail.design/projects/adaelo
 **Industry:** Music Tech / B2B Marketplace
-**Summary:** Mohd Suhail designed Adaelo, a B2B music licensing marketplace, to simplify the fragmented and opaque process of music licensing between artists, licensees, and label owners. The work covered marketplace architecture, search and filtering design, and the full end-to-end licensing workflow.
+**Summary:** Mohd Suhail designed Adaelo, a B2B music licensing marketplace, to simplify the fragmented and opaque process of music licensing between artists, licensees, and label owners. Beginning with project objectives, problem-and-solution definition, and competitor analysis, the work covered marketplace architecture, wireframes, search and filtering design, and dedicated end-to-end licensing workflows for each of its three user roles — artist, licensee, and label owner.
+**Related case studies:** That's My Jam (/projects/thats-my-jam), AcadAlly Teacher App (/projects/acadally-teacher), Gexa Energy (/projects/gexa-energy)
 
 ### 7. Direct Care Source
 **URL:** https://suhail.design/projects/direct-care-source
 **Industry:** Healthcare / Health Tech
-**Summary:** Mohd Suhail led product design for Direct Care Source — a healthcare platform connecting patients with care services — covering concept validation, product strategy, and UX design. The engagement focused on building patient trust, ensuring accessibility, and streamlining the care service discovery experience.
+**Summary:** Mohd Suhail led product design for Direct Care Source — a healthcare platform connecting patients with care services — covering concept validation, market research, business and product strategy, and complete UX design. The engagement focused on building patient trust, ensuring accessibility, and streamlining the care service discovery experience, with the goal of attracting new patients and keeping churn low through a product grounded in real user insights.
+**Related case studies:** Mindfulness Studio (/projects/mindfulness-studio), AcadAlly Teacher App (/projects/acadally-teacher), Gexa Energy (/projects/gexa-energy)
 
 ## Frequently Asked Questions
 

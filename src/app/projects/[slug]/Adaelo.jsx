@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 
 
 
@@ -338,6 +339,8 @@ const Adaelo = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="adaelo" />
 
       <Footer />
 

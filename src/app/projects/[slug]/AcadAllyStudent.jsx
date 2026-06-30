@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 import PasswordGate from '../../../components/PasswordGate';
 import { StudentAcadally, 
   A1 , 
@@ -643,6 +644,8 @@ const AcadAllyStudent = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="acadally-student" />
 
       <Footer />
     </main>

@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 const Abc6 = '/Abc6.png';
 
 const DirectCareSource = () => {
@@ -153,6 +154,8 @@ const DirectCareSource = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="direct-care-source" />
 
       <Footer />
     </main>

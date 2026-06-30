@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 import PasswordGate from '../../../components/PasswordGate';
 
 
@@ -600,6 +601,8 @@ const AcadAllyTeacher = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="acadally-teacher" />
 
       <Footer />
     </main>

@@ -168,6 +168,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${firaCode.variable} ${openSans.variable}`}>
       <head>
+        {/* rel="me" identity links — associate this site with its owner's other profiles (mirrors personSchema.sameAs) */}
+        <link rel="me" href="https://www.linkedin.com/in/suuhail01/" />
+        <link rel="me" href="https://www.behance.net/suuhail01" />
+        <link rel="me" href="https://www.figma.com/@suhail01" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

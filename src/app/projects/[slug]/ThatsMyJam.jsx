@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
+import RelatedWork from '../../../components/RelatedWork';
 // import { TracingBeam } from '../../../components/ui/tracing-beam';
 import { MyJam, D1, D2a, D2b, D3, D4, D5, D6, D8, D9, D10, D11, D12a, D12b, D13a, D13b, D14a, D14b, D14c, D14d, D14e, D15, D16a, D16b, D16c, D16d, D16e, D16f, D16g, D16h, D17, D18 } from '../../../data/caseStudyImage';
 import AOS from 'aos';
@@ -395,6 +396,8 @@ const ThatsMyJam = () => {
           </Link>
         </div>
       </div>
+
+      <RelatedWork currentSlug="thats-my-jam" />
 
       <Footer />
     </main>
