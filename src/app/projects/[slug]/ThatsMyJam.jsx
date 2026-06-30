@@ -5,42 +5,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
 // import { TracingBeam } from '../../../components/ui/tracing-beam';
-const MyJam = '/myjam/MyJam.png';
+import { MyJam, D1, D2a, D2b, D3, D4, D5, D6, D8, D9, D10, D11, D12a, D12b, D13a, D13b, D14a, D14b, D14c, D14d, D14e, D15, D16a, D16b, D16c, D16d, D16e, D16f, D16g, D16h, D17, D18 } from '../../../data/caseStudyImage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-const D1 = '/myjam/D1.png';
-const D2a = '/myjam/D2a.png';
-const D2b = '/myjam/D2b.png';
-const D3 = '/myjam/D3.png';
-const D4 = '/myjam/D4.png';
-const D5 = '/myjam/D5.png';
-const D6 = '/myjam/D6.png';
-const D8 = '/myjam/D8.png';
-const D9 = '/myjam/D9.png';
-const D10 = '/myjam/D10.png';
-const D11 = '/myjam/D11.png';
-const D12a = '/myjam/D12a.png';
-const D12b = '/myjam/D12b.png';
-const D13a = '/myjam/D13a.png';
-const D13b = '/myjam/D13b.png';
-const D14a = '/myjam/D14a.png';
-const D14b = '/myjam/D14b.png';
-const D14c = '/myjam/D14c.png';
-const D14d = '/myjam/D14d.png';
-const D14e = '/myjam/D14e.png';
-const D15 = '/myjam/D15.png';
-const D16a = '/myjam/D16a.png';
-const D16b = '/myjam/D16b.png';
-const D16c = '/myjam/D16c.png';
-const D16d = '/myjam/D16d.png';
-const D16e = '/myjam/D16e.png';
-const D16f = '/myjam/D16f.png';
-const D16g = '/myjam/D16g.png';
-const D16h = '/myjam/D16h.png';
-const D17 = '/myjam/D17.png';
-const D18 = '/myjam/D18.png';
-
 
 
 
@@ -48,12 +15,7 @@ const D18 = '/myjam/D18.png';
 const ThatsMyJam = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Ensure page is at top and initialize AOS.
-    // Also refresh AOS after window load and after images have finished loading
-    // so that AOS measures elements correctly (images can change layout).
     AOS.init({ duration: 400, once: true, easing: 'ease-out' });
-
-    // Small, aggressive refresh strategy to handle delayed image loads
     const refreshAOS = () => {
       try {
         // full recalculation when available
@@ -66,11 +28,7 @@ const ThatsMyJam = () => {
 
     // refresh once shortly after mount (fallback)
     const fallbackT = setTimeout(refreshAOS, 250);
-
-    // refresh when the window 'load' event fires (images/fonts done)
     window.addEventListener('load', refreshAOS);
-
-    // also wait for all images inside this component to load and then refresh
     const imgs = Array.from(document.querySelectorAll('img'));
     let remaining = imgs.length;
     const onImgLoad = () => {

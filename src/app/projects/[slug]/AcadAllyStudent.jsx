@@ -70,69 +70,6 @@ import { StudentAcadally,
 } from '../../../data/caseStudyImage';
 
 
-
-
-// const A1 = '/student/A1.png';
-// const A2 = '/student/A2.png';
-// const A3 = '/student/A3.png';
-// const A7 = '/student/A7.png';
-// const A9 = '/student/A9.png';
-// const A10 = '/student/A10.png';
-// const A11 = '/student/A11.png';
-// const A11a = '/student/A11a.png';
-// const A11b = '/student/A11b.png';
-// const A12 = '/student/A12.png';
-// const A13 = '/student/A13.png';
-// const A14 = '/student/A14.png';
-// const A15a = '/student/A15a.png';
-// const A15b = '/student/A15b.png';
-// const A15c = '/student/A15c.png';
-// const A15d = '/student/A15d.png';
-// const A15e = '/student/A15e.png';
-// const A15f = '/student/A15f.png';
-// const A15g = '/student/A15g.png';
-// const A15h = '/student/A15h.png';
-// const A15i = '/student/A15i.png';
-// const A15j = '/student/A15j.png';
-// const A16 = '/student/A16.png';
-// const A17 = '/student/A17.png';
-// const A17a = '/student/A17a.png';
-// const A17b = '/student/A17b.png';
-// const A17c = '/student/A17c.png';
-// const A17d = '/student/A17d.png';
-// const A17e = '/student/A17e.png';
-// const A17f = '/student/A17f.png';
-// const A17g = '/student/A17g.png';
-// const A17h = '/student/A17h.png';
-// const A18 = '/student/A18.png';
-// const A18a = '/student/A18a.png';
-// const A19 = '/student/A19.png';
-// const A19a = '/student/A19a.png';
-// const A20 = '/student/A20.png';
-// const A20a = '/student/A20a.png';
-// const A20b = '/student/A20b.png';
-// const A20c = '/student/A20c.png';
-// const A20d = '/student/A20d.png';
-// const A20e = '/student/A20e.png';
-// const A20f = '/student/A20f.png';
-// const A20g = '/student/A20g.png';
-// const A20h = '/student/A20h.png';
-// const A20i = '/student/A20i.png';
-// const A20j = '/student/A20j.png';
-// const A22 = '/student/A22.png';
-// const A23a = '/student/A23a.png';
-// const A23b = '/student/A23b.png';
-// const A23c = '/student/A23c.png';
-// const A23d = '/student/A23d.png';
-// const A23e = '/student/A23e.png';
-// const A23f = '/student/A23f.png';
-// const A23g = '/student/A23g.png';
-// const A24 = '/student/A24.png';
-// const A24a = '/student/A24a.png';
-// const A25 = '/student/A25.png';
-// const A26 = '/student/A26.png';
-
-
 const AcadAllyStudent = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -676,7 +613,7 @@ const AcadAllyStudent = () => {
       </motion.section>
 
       {/* Services CTA */}
-      <div className="max-w-6xl mx-auto  py-6 sm:py-12">
+      {/* <div className="max-w-6xl mx-auto  py-6 sm:py-12">
         <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-xs text-neutral-500 uppercase tracking-widest mb-2">Work with Mohd Suhail</p>
@@ -690,7 +627,7 @@ const AcadAllyStudent = () => {
             View Services →
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Next Project Navigation */}
       <div className="max-w-6xl mx-auto py-10 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-neutral-800">

@@ -6,37 +6,7 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-
 import { Gexa, GexaVS, G1, G2, G3, G4, G5, G6, G7, G8, G9a, G9b, G9c, G9d, G9e, G10, G11, G12, G13} from '../../../data/caseStudyImage';
-
-
-// const Gexa = '/gexa/Gexa.png';
-// const GexaVS = '/gexa/gexaVS.svg';
-// const G1 = '/gexa/G1.png';
-// const G2 = '/gexa/G2.png';
-// const G3 = '/gexa/G3.png';
-// const G4 = '/gexa/G4.png';
-// const G5 = '/gexa/G5.png';
-// const G6 = '/gexa/G6.png';
-// const G7 = '/gexa/G7.png';
-// const G8 = '/gexa/G8.png';
-// const G9a = '/gexa/G9a.png';
-// const G9b = '/gexa/G9b.png';
-// const G9c = '/gexa/G9c.png';
-// const G9d = '/gexa/G9d.png';
-// const G9e = '/gexa/G9e.png';
-// const G10 = '/gexa/G10.png';
-// const G11 = '/gexa/G11.png';
-// const G12 = '/gexa/G12.png';
-// const G13 = '/gexa/G13.png';
-
-
-
-
-
-
-
-
 
 
 const GexaEnergy = () => {

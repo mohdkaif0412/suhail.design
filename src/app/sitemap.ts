@@ -2,23 +2,25 @@ import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://suhail.design';
 
-const projectSlugs = [
-  'acadally-student',
-  'acadally-teacher',
-  'mindfulness-studio',
-  'gexa-energy',
-  'thats-my-jam',
-  'adaelo',
-  'direct-care-source',
-];
+const projectEntryDates: Record<string, string> = {
+  'acadally-student':   '2026-04-01',
+  'acadally-teacher':   '2026-04-01',
+  'mindfulness-studio': '2026-04-01',
+  'gexa-energy':        '2026-04-01',
+  'thats-my-jam':       '2026-04-01',
+  'adaelo':             '2026-04-01',
+  'direct-care-source': '2026-04-01',
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const projectEntries: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({
-    url: `${BASE_URL}/projects/${slug}`,
-    lastModified: new Date('2024-12-01'),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
+  const projectEntries: MetadataRoute.Sitemap = Object.entries(projectEntryDates).map(
+    ([slug, date]) => ({
+      url: `${BASE_URL}/projects/${slug}`,
+      lastModified: new Date(date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })
+  );
 
   return [
     {
@@ -43,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/services`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.85,
     },
     ...projectEntries,
   ];

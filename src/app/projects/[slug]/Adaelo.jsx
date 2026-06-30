@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -6,36 +6,12 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../../../components/pages/Footer';
-const AdaeloImg = '/adaelo/Adaelo.png';
-const A1 = '/adaelo/A1.png';
-const A2a = '/adaelo/A2a.png';
-const A2b = '/adaelo/A2b.png';
-const A3 = '/adaelo/A3.png';
-const A4 = '/adaelo/A4.png';
-const A4a = '/adaelo/A4a.png';
-const A4b = '/adaelo/A4b.png';
-const A4c = '/adaelo/A4c.png';
-const A4d = '/adaelo/A4d.png';
-const A4e = '/adaelo/A4e.png';
-const A4f = '/adaelo/A4f.png';
-const A4g = '/adaelo/A4g.png';
-const A4h = '/adaelo/A4h.png';
-const A5a = '/adaelo/A5a.png';
-const A5b = '/adaelo/A5b.png';
-const A5c = '/adaelo/A5c.png';
-const A6a = '/adaelo/A6a.png';
-const A6b = '/adaelo/A6b.png';
-const A6c = '/adaelo/A6c.png';
-const A6d = '/adaelo/A6d.png';
-const A7a = '/adaelo/A7a.png';
-const A7b = '/adaelo/A7b.png';
-const A7c = '/adaelo/A7c.png';
-const A7d = '/adaelo/A7d.png';
-const A7e = '/adaelo/A7e.png';
-const A7f = '/adaelo/A7f.png';
-const A7g = '/adaelo/A7g.png';
-const A7h = '/adaelo/A7h.png';
-const A7i = '/adaelo/A7i.png';
+
+
+
+
+
+import { Adaelo as AdaeloImg, Ad1, Ad2a, Ad2b, Ad3, Ad4, Ad4a, Ad4b, Ad4c, Ad4d, Ad4e, Ad4f, Ad4g, Ad4h, Ad5a, Ad5b, Ad5c, Ad6a, Ad6b, Ad6c, Ad6d, Ad7a, Ad7b, Ad7c, Ad7d, Ad7e, Ad7f, Ad7g, Ad7h, Ad7i , Ad8 } from '../../../data/caseStudyImage';
 
 
 const Adaelo = () => {
@@ -130,7 +106,7 @@ const Adaelo = () => {
       
         <motion.div variants={itemVariants} className=" mt-16">
           <div className="w-full mt-12">
-            <img src={A1} alt="Design Process" data-aos="fade-up" data-aos-delay={150} />
+            <img src={Ad1} alt="Design Process" data-aos="fade-up" data-aos-delay={150} />
           </div>
         </motion.div>
 
@@ -150,10 +126,10 @@ const Adaelo = () => {
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A2a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={Ad2a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-12">
-            <img src={A2b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={Ad2b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -169,7 +145,7 @@ const Adaelo = () => {
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A3} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={Ad3} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -185,28 +161,28 @@ const Adaelo = () => {
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A4a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={Ad4a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4d} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4d} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4e} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4e} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4f} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4f} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4g} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad4g} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A4h} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+            <img src={Ad4h} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
           </div>
         </motion.div>
 
@@ -231,7 +207,7 @@ const Adaelo = () => {
               </div>
             </motion.div>
             <div className="w-full mt-12">
-              <img src={A5a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+              <img src={Ad5a} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </motion.div>
 
@@ -243,7 +219,7 @@ const Adaelo = () => {
               </div>
             </motion.div>
             <div className="w-full mt-12">
-              <img src={A5b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+              <img src={Ad5b} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </motion.div>
 
@@ -255,7 +231,7 @@ const Adaelo = () => {
               </div>
             </motion.div>
             <div className="w-full mt-12">
-              <img src={A5c} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+              <img src={Ad5c} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </motion.div>
         </motion.div>
@@ -272,16 +248,16 @@ const Adaelo = () => {
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A6a} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad6a} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A6b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad6b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A6c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad6c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A6d} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad6d} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
         </motion.div>
 
@@ -298,13 +274,13 @@ const Adaelo = () => {
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A7a} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7a} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A7b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7b} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A7c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7c} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
 
           <motion.div className=" mt-12" >
@@ -315,18 +291,18 @@ const Adaelo = () => {
               </div>
             </motion.div>
             <div className="w-full mt-12">
-              <img src={A7d} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
+              <img src={Ad7d} alt="Design Process" data-aos="fade-up" data-aos-delay={250} />
             </div>
           </motion.div>
 
           <div className="w-full mt-12">
-            <img src={A7e} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7e} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A7f} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7f} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <div className="w-full mt-12">
-            <img src={A7g} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7g} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
           <motion.div className=" mt-12" >
             <motion.div className="mb-12" data-aos="fade-up" data-aos-delay={200} >
@@ -336,12 +312,14 @@ const Adaelo = () => {
               </div>
             </motion.div>
             <div className="w-full mt-12">
-              <img src={A7h} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+              <img src={Ad7h} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
             </div>
           </motion.div>
           <div className="w-full mt-12">
-            <img src={A7i} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
+            <img src={Ad7i} alt="Design Process" data-aos="fade-up" data-aos-delay={200} />
           </div>
+
+          <img src={Ad8} alt="New Section" className="w-full mt-30" data-aos="fade-up" data-aos-delay={200} />
         </motion.div>
 
       </motion.section>

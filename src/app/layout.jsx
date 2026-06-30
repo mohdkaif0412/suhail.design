@@ -36,7 +36,7 @@ export const metadata = {
     template: '%s | Mohd Suhail',
   },
   description:
-    'UI/UX Designer & Product Designer with 4+ years of experience in B2B and B2C product design. Explore case studies in user research, design systems, and human-centered design.',
+    'UI/UX Designer & Product Designer with 5+ years of experience in B2B and B2C product design. Explore case studies in user research, design systems, and human-centered design.',
   keywords: [
     'UI/UX Designer',
     'Product Designer',
@@ -64,14 +64,13 @@ export const metadata = {
     siteName: 'Mohd Suhail — Portfolio',
     title: 'Mohd Suhail — UI/UX & Product Designer',
     description:
-      'UI/UX Designer & Product Designer with 4+ years of experience. Explore B2B and B2C case studies in user research, design systems, and interaction design.',
+      'UI/UX Designer & Product Designer with 5+ years of experience. Explore B2B and B2C case studies in user research, design systems, and interaction design.',
     images: [
       {
-        url: '/og/home.jpg',
+        url: '/og?title=Mohd+Suhail+%E2%80%94+UI%2FUX+%26+Product+Designer&subtitle=suhail.design',
         width: 1200,
         height: 630,
         alt: 'Mohd Suhail — UI/UX and Product Designer Portfolio',
-        type: 'image/jpeg',
       },
     ],
   },
@@ -79,8 +78,8 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mohd Suhail — UI/UX & Product Designer',
     description:
-      'UI/UX Designer & Product Designer with 4+ years experience. B2B and B2C design case studies.',
-    images: ['/og/home.jpg'],
+      'UI/UX Designer & Product Designer with 5+ years experience. B2B and B2C design case studies.',
+    images: ['/og?title=Mohd+Suhail+%E2%80%94+UI%2FUX+%26+Product+Designer&subtitle=suhail.design'],
   },
   robots: {
     index: true,
@@ -110,13 +109,14 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Mohd Suhail',
-  alternateName: ['Suhail', 'Mohammad Suhail'],
+  alternateName: ['Suhail', 'Mohammad Suhail', 'Mohd Suhail Designer'],
   jobTitle: 'Senior UI/UX Designer & Product Designer',
   description:
-    'Senior Product Designer with 4+ years of professional experience in UX research, product strategy, design systems, and human-centered product design for B2B and B2C clients.',
+    'Senior Product Designer with 5+ years of professional experience in UX research, product strategy, design systems, and human-centered product design for B2B and B2C clients. Based in Delhi, India — available for remote work globally.',
   url: 'https://suhail.design',
   email: 'sirsuhail01@gmail.com',
-  image: 'https://suhail.design/og/home.jpg',
+  telephone: '+91-9910978079',
+  image: 'https://suhail.design/og?title=Mohd+Suhail+%E2%80%94+UI%2FUX+%26+Product+Designer&subtitle=suhail.design',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Delhi',
@@ -137,6 +137,10 @@ const personSchema = {
     'Design Strategy',
     'B2B Product Design',
     'B2C Product Design',
+    'SaaS Product Design',
+    'Mobile App Design',
+    'EdTech Design',
+    'Healthcare UX',
   ],
   sameAs: [
     'https://www.linkedin.com/in/suuhail01/',

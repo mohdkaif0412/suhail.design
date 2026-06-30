@@ -23,46 +23,67 @@ const projectComponents = {
 
 const projectMeta = {
   'acadally-student': {
-    title: 'AcadAlly Student App — UI/UX Case Study',
+    title: 'AcadAlly Student App — EdTech UI/UX Case Study',
     description:
-      'UX case study for AcadAlly — a diagnostic mobile app that identifies student learning gaps and delivers personalized adaptive assessments and video content.',
+      'UX case study: AcadAlly student app — diagnostic ed-tech mobile app with adaptive assessments, learning-gap analysis, and personalised video content. UX research, IA, and high-fidelity design.',
     image: '/PR1.png',
+    keywords: 'EdTech UX design, mobile app case study, adaptive learning UX, ed-tech product design, student app design, personalized learning interface',
+    industry: 'EdTech / Education',
+    datePublished: '2024-06-01',
   },
   'acadally-teacher': {
-    title: 'AcadAlly Teacher App — UI/UX Case Study',
+    title: 'AcadAlly Teacher App — EdTech Dashboard UI/UX Case Study',
     description:
-      'UX case study for the AcadAlly Teacher Application — a platform that streamlines teaching by identifying learning gaps and enabling personalized remediation plans.',
+      'UX case study: AcadAlly teacher platform — a B2B ed-tech dashboard that streamlines learning-gap identification and personalised remediation plans. UX research, design systems, and interaction design.',
     image: '/PR2.png',
+    keywords: 'EdTech B2B product design, teacher dashboard UX, learning management system design, ed-tech case study, B2B SaaS UX',
+    industry: 'EdTech / B2B SaaS',
+    datePublished: '2024-07-01',
   },
   'mindfulness-studio': {
-    title: 'Mindfulness Studio — Meditation App UI/UX Case Study',
+    title: 'Mindfulness Studio — Wellness App UI/UX Case Study',
     description:
-      'UX case study for Mindfulness Studio — a meditation app with personalized routines, progress tracking, and reminder notifications for stress management and wellbeing.',
+      'UX case study: Mindfulness Studio — a B2C meditation and wellness app with personalised routines, progress tracking, and smart reminders. UX research, onboarding design, and mobile UI.',
     image: '/PR3.png',
+    keywords: 'wellness app design, meditation app UX, B2C mobile app design, health app UI, onboarding UX, mobile UX case study',
+    industry: 'Health & Wellness',
+    datePublished: '2024-04-01',
   },
   'gexa-energy': {
-    title: 'Gexa Energy — Dashboard & App UI/UX Case Study',
+    title: 'Gexa Energy — Smart Dashboard UI/UX Case Study',
     description:
-      'UX case study for Gexa Energy — a smart energy management dashboard with bill tracking, usage analytics, and smart thermostat controls for residential customers.',
+      'UX case study: Gexa Energy — a smart energy management dashboard with bill tracking, usage analytics, and thermostat controls for residential customers. Data visualisation and dashboard UX.',
     image: '/PR4.png',
+    keywords: 'energy dashboard UX, data visualization design, smart home app UI, utility app UX case study, dashboard design, analytics UX',
+    industry: 'Energy / Utilities',
+    datePublished: '2024-08-01',
   },
   'thats-my-jam': {
     title: "That's My Jam — Music Discovery App UI/UX Case Study",
     description:
-      "UX case study for That's My Jam — a music discovery app connecting users with local artists, events, personalized playlists, and a social music-sharing platform.",
+      "UX case study: That's My Jam — a B2C music discovery app connecting fans with local artists, live events, and personalised playlists. Social music-sharing UX and community design.",
     image: '/PR5.png',
+    keywords: 'music app UX design, B2C mobile app case study, social platform design, music discovery UI, community app UX, playlist design',
+    industry: 'Music / Entertainment',
+    datePublished: '2024-05-01',
   },
   'adaelo': {
-    title: 'Adaelo Music — Licensing Platform UI/UX Case Study',
+    title: 'Adaelo — Music Licensing Platform UI/UX Case Study',
     description:
-      'UX case study for Adaelo — a music licensing platform designed to simplify collaboration between artists, licensees, and label owners with accessible music discovery.',
+      'UX case study: Adaelo — a B2B music licensing platform simplifying collaboration between artists, licensees, and label owners. Marketplace UX, search design, and licensing workflow.',
     image: '/PR6.png',
+    keywords: 'music licensing platform UX, marketplace design, B2B platform case study, creative marketplace UI, music industry product design',
+    industry: 'Music Tech / B2B Marketplace',
+    datePublished: '2024-03-01',
   },
   'direct-care-source': {
     title: 'Direct Care Source — Healthcare UI/UX Case Study',
     description:
-      'UX case study for Direct Care Source — a healthcare product design project focused on validating concepts, establishing product strategy, and designing user-centered digital experiences.',
+      'UX case study: Direct Care Source — a healthcare product design engagement covering concept validation, product strategy, and user-centred digital experience design for care services.',
     image: '/PR7.png',
+    keywords: 'healthcare UX design, medical product design, health tech case study, care platform UI, healthcare product strategy, patient experience design',
+    industry: 'Healthcare / Health Tech',
+    datePublished: '2024-09-01',
   },
 };
 
@@ -77,6 +98,7 @@ export async function generateMetadata({ params }) {
   return {
     title: meta.title,
     description: meta.description,
+    keywords: meta.keywords,
     alternates: {
       canonical: `https://suhail.design/projects/${slug}`,
     },
@@ -85,14 +107,23 @@ export async function generateMetadata({ params }) {
       description: meta.description,
       url: `https://suhail.design/projects/${slug}`,
       type: 'article',
+      publishedTime: meta.datePublished,
+      authors: ['https://suhail.design/about'],
+      tags: meta.keywords?.split(', '),
       images: [
         {
-          url: meta.image,
+          url: `https://suhail.design${meta.image}`,
           width: 1200,
           height: 630,
           alt: meta.title,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
+      images: [`https://suhail.design${meta.image}`],
     },
   };
 }
@@ -125,12 +156,19 @@ export default async function ProjectPage({ params }) {
         description: meta.description,
         url: `https://suhail.design/projects/${slug}`,
         image: `https://suhail.design${meta.image}`,
+        datePublished: meta.datePublished,
+        dateModified: meta.datePublished,
+        keywords: meta.keywords,
+        inLanguage: 'en-US',
+        isAccessibleForFree: true,
         creator: {
           '@type': 'Person',
           name: 'Mohd Suhail',
           url: 'https://suhail.design',
+          jobTitle: 'Senior UI/UX & Product Designer',
         },
-        about: { '@type': 'Thing', name: 'UI/UX Design' },
+        about: { '@type': 'Thing', name: meta.industry ?? 'UI/UX Design' },
+        genre: 'Product Design Case Study',
       }
     : null;
 

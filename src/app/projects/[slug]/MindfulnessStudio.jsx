@@ -35,44 +35,6 @@ import { Mindfullness ,
 } from '../../../data/caseStudyImage';
 
 
-
-
-
-
-
-// const Mindfullness = '/mindfullness/Mindfullness.png';
-// const M1 = '/mindfullness/M1.png';
-// const M2 = '/mindfullness/M2.png';
-// const M3 = '/mindfullness/M3.png';
-// const M4a = '/mindfullness/M4a.png';
-// const M4b = '/mindfullness/M4b.png';
-// const M5a = '/mindfullness/M5a.png';
-// const M5b = '/mindfullness/M5b.png';
-// const M6a = '/mindfullness/M6a.png';
-// const M6b = '/mindfullness/M6b.png';
-// const M6c = '/mindfullness/M6c.png';
-// const M6d = '/mindfullness/M6d.png';
-// const M7 = '/mindfullness/M7.png';
-// const M8 = '/mindfullness/M8.png';
-// const M9a = '/mindfullness/M9a.png';
-// const M9b = '/mindfullness/M9b.png';
-// const M9c = '/mindfullness/M9c.png';
-// const M9d = '/mindfullness/M9d.png';
-// const M9e = '/mindfullness/M9e.png';
-// const M9f = '/mindfullness/M9f.png';
-// const M9g = '/mindfullness/M9g.png';
-// const M9h = '/mindfullness/M9h.png';
-// const M9i = '/mindfullness/M9i.png';
-// const M9j = '/mindfullness/M9j.png';
-
-
-
-
-
-
-
-
-
 const MindfulnessStudio = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

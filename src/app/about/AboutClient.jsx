@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Footer from '../../components/pages/Footer';
 import ProfessionalJourney from '../../components/pages/ProfessionalJourney';
 import Image from 'next/image';
+import { Jrn1, Jrn2, Jrn3, Jrn4, Jrn5, Jrn6, Jrn7 } from '../../data/caseStudyImage';
 
 
 
@@ -19,7 +20,7 @@ const journeyData = [
     badgeColor: 'bg-neutral-700',
     title: 'This is my story — alongside some flicks from my recent trip.',
     description: '',
-    image: '/jr1.png',
+    image: Jrn1,
     alt: 'Mohd Suhail — personal journey photo',
     layout: 'left',
     animation: { x: -50 },
@@ -32,7 +33,7 @@ const journeyData = [
     title: 'The Early Days of "Designing" (More Like Clicking Random Buttons in Photoshop)',
     description:
       'My design journey began in 2010 when, at 14, after my 10th board exams, my father enrolled me in a computer institute during a three-month break. There, I was introduced to design tools like Photoshop, Corel Draw and Adobe PageMaker. quickly found myself engrossed in creating web pages, logos, and posters.\n\nBy the age of 16, I had an epiphany – design was my true calling. Driven by this realization, I expanded my skills to include HTML and CSS, laying the foundation for my future in product design.',
-    image: '/jr2.png',
+    image: Jrn2,
     alt: 'Early design journey 2010 — learning Photoshop and Corel Draw',
     layout: 'right',
     animation: { x: 50 },
@@ -45,7 +46,7 @@ const journeyData = [
     title: 'Bachelor of Arts – The "Let\'s Figure Out What\'s Next" Chapter',
     description:
       "When I finished 12th grade, I found myself at a fork in the road. I knew I loved design, but there was no 'Bachelor's in UI/UX Design' course at my fingertips, and mentors? I didn't even know such people existed! So, I took the safe route and pursued a Bachelor's degree in Arts.\n\nThe decision was more of a stopgap, a way to keep exploring while figuring out what I truly wanted. Though it wasn't directly linked to design, it gave me time to understand my aspirations and, most importantly, develop a strong appreciation for the bigger picture in creativity.",
-    image: '/jr3.png',
+    image: Jrn3,
     alt: 'Bachelor of Arts 2015 — exploring design aspirations',
     layout: 'left',
     animation: { x: -50 },
@@ -58,7 +59,7 @@ const journeyData = [
     title: 'Diploma in Graphic and Web Design – Time to Get Serious!',
     description:
       'After graduating, I hit another crossroads. My interest in design was no longer just a hobby – it was now a full-blown obsession. I realized it was time to go pro. So, I took a leap of faith and enrolled in Arena Animation\'s diploma program for Graphic and Web Design and Development. \n\nThis was my official foray into structured design education. It was here that I refined my craft, learning the nitty-gritty of design and development. This wasn\'t just a course—it was my launchpad.',
-    image: '/jr4.png',
+    image: Jrn4,
     alt: 'Diploma in Graphic and Web Design 2019 — Arena Animation',
     layout: 'right',
     animation: { x: 50 },
@@ -72,7 +73,7 @@ const journeyData = [
     title: 'Masters in Computer Application – Because Why Not Combine Art with Science?',
     description:
       'While I was designing away, I had a realization: to stand out in the UI/UX world, I needed to understand the technical side of things, too. So, I jumped into a Master\'s program in Computer Applications, where I delved into tech wizardry and decoded the science behind design. \n\nThis wasn\'t just about bagging a degree. It was a calculated move to blend my creative skills with technical expertise. By the end of the program, I felt like a UI/UX designer with a superpower—a fusion of art and code.',
-    image: '/jr5.png',
+    image: Jrn5,
     alt: 'Masters in Computer Application 2020 — combining design with technology',
     layout: 'left',
     animation: { y: 50 },
@@ -91,7 +92,7 @@ const journeyData = [
     * Juggle multiple projects, all while becoming a human sponge soaking up industry knowledge.
 
       It was an exhilarating ride that armed me with a portfolio of live, impactful projects and an unshakeable confidence in my abilities.`,
-    image: '/jr6.png',
+    image: Jrn6,
     alt: 'UI/UX internship at Copper Digital 2021 — first professional experience',
     layout: 'right',
     animation: { x: 50 },
@@ -104,7 +105,7 @@ const journeyData = [
     title: 'Leveling Up',
     description:
       'After that i have joined acadally as a product designer where i have shaped my UI UX designer process and learned and enhanced my UX Skills.',
-    image: '/jr7.png',
+    image: Jrn7,
     alt: 'Product Designer at AcadAlly 2023 — leveling up UX skills',
     layout: 'left',
     animation: { x: -50 },

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { cn } from "../../utils/animations";
+import { cn } from "../../lib/utils";
  
 export const WobbleCard = ({
   children,

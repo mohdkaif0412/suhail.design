@@ -3,7 +3,7 @@ import React, { useId, useMemo } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { cn } from "../../utils/animations";
+import { cn } from "../../lib/utils";
 import { motion, useAnimation } from "motion/react";
  
 export const SparklesCore = React.memo((props) => {
