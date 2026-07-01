@@ -93,6 +93,7 @@ export const metadata = {
     },
   },
   verification: {
+    google: 'UbKNS-feeGRL0ndxdtUwV5nhqiN4GlkwLx0O3makPjk',
     other: {
       'ahrefs-site-verification':
         '17f1be0b4dec7dcab39a7472b4a6fd101acdb15509545e1b77f8adea8fd88766',
