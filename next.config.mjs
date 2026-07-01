@@ -46,6 +46,12 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.suhail.design' }],
+        destination: 'https://suhail.design/:path*',
+        permanent: true,
+      },
     ];
   },
 
